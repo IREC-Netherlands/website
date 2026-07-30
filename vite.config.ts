@@ -14,6 +14,11 @@ export default defineConfig({
 				runes: ({ filename }) => filename.split(/[/\\]/).includes('node_modules') ? undefined : true,
         		warningFilter: (warning) => warning.code !== "script_context_deprecated",
 			},
+			prerender: {
+				handleHttpError: 'warn',
+				handleMissingId: 'warn',
+				handleUnseenRoutes: 'warn'
+			},
 			adapter: adapter(),
 			preprocess: [mdsvex({ extensions: ['.svx', '.md'] })],
 			extensions: ['.svelte', '.svx', '.md']
