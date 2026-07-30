@@ -36,7 +36,6 @@
 	.card {
 		display: flex;
 		border: 1px solid #ddd;
-		border-radius: 10px;
 		overflow: hidden;
 		width: 100%;
 		background-color: white;

@@ -10,24 +10,16 @@
 
 	const navigator = [
 		{
-			title: 'Articles',
-			anchor: '/articles'
+			title: 'About Us',
+			anchor: '/about'
 		},
 		{
-			title: 'Members',
-			anchor: '/members'
+			title: 'Activities',
+			anchor: '/activities'
 		},
 		{
-			title: 'Research',
-			anchor: '/research'
-		},
-		{
-			title: 'Publications',
-			anchor: '/publications'
-		},
-		{
-			title: 'Teaching',
-			anchor: '/teaching'
+			title: 'Locations',
+			anchor: '/location'
 		},
 		{
 			title: 'Contact Us',
@@ -38,7 +30,7 @@
 
 <nav>
 	<a href="/" class="logo">
-		<img class="img-logo" src="/assets/logo/UBIG-transparant-tight.png" alt="ubig-logo" />
+		<img class="img-logo" src="/assets/logo/grii-logo-black.png" alt="GRII Belanda" />
 	</a>
 
 	<button class="hamburger" onclick={toggleMenu}><Menu /></button>
@@ -56,10 +48,10 @@
 
 <style>
 	nav {
-		padding-top: var(--size-3);
-		padding-bottom: var(--size-3);
+		padding-top: var(--size-1);
+		padding-bottom: var(--size-1);
 		padding-inline: var(--size-12);
-		background-color: var(--surface-4);
+		background-color: var(--surface-1);
 
 		@media (min-width: 1440px) {
 			display: flex;
@@ -104,7 +96,8 @@
 				color: inherit;
 				text-decoration: none;
 				white-space: nowrap;
-				font-size: var(--font-size-3);
+				font-size: var(--font-size-1);
+				font-weight: var(--font-weight-5);
 			}
 
 			li {
@@ -139,8 +132,8 @@
 		}
 
 		.logo {
+			align-items: center;
 			margin-block: var(--size-3);
-			width: var(--size-13);
 			.img-logo {
 				width: var(--size-13);
 				border-radius: 0;

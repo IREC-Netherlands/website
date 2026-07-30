@@ -1,7 +1,7 @@
 <script>
 	let {
-		title = 'Card Title',
-		description = 'This is a description of the card.',
+		title = 'Bulletin',
+		description = 'This is a description of the activities.',
 		image = ''
 	} = $props();
 </script>
@@ -10,7 +10,7 @@
 	{#if image}
 		<img src={image} alt={title} />
 	{:else}
-		<img src="/assets/logo/UBIG-logo only.png" alt={title} />
+		<img src="/assets/logo/grii-icon.png" alt={title} />
 	{/if}
 	<div class="card-body">
 		<h2 class="card-title">{title}</h2>
@@ -21,7 +21,6 @@
 <style>
 	.card {
 		border: 1px solid #ddd;
-		border-radius: 10px;
 		overflow: hidden;
 		width: 40%;
 		aspect-ratio: var(--ratio-landscape);

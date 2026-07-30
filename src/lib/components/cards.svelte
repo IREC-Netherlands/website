@@ -7,7 +7,7 @@
 </script>
 
 <div class="card">
-	<img src={image ? image : '/assets/logo/UBIG-logo only.png'} alt={title} />
+	<img src={image ? image : '/assets/logo/grii-icon.png'} alt={title} />
 	<div class="card-body">
 		<h2 class="card-title">{title}</h2>
 		<p class="card-description">{description}</p>
@@ -17,7 +17,6 @@
 <style>
 	.card {
 		border: 1px solid #ddd;
-		border-radius: 10px;
 		overflow: hidden;
 		width: var(--size-14);
 		aspect-ratio: var(--ratio-portrait);
@@ -47,8 +46,9 @@
 	}
 
 	.card-description {
-		font-size: 1rem;
-		color: #555;
+		font-size: var(--size-19);
+		color: var(--text-1);
+		font-weight: var(--font-weight-3);
 		margin-top: 10px;
 
 		line-clamp: 3;
