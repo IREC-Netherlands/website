@@ -35,7 +35,6 @@
 		margin-top: var(--size-9);
 		justify-self: center;
 	}
-	.notices,
 	.events {
 		display: flex;
 		justify-content: center;
