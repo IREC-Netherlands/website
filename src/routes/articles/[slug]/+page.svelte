@@ -14,7 +14,7 @@
 <main>
 	<article>
 		<hgroup>
-			<h1>{data.meta.title}</h1>
+			<h1 class="text-5xl">{data.meta.title}</h1>
 			<p>Published at {formatDate(data.meta.date)}</p>
 		</hgroup>
 
@@ -36,7 +36,6 @@
 
 		h1 {
 			text-transform: capitalize;
-			font-size: 3.5rem;
 		}
 
 		h1 + p {

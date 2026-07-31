@@ -9,7 +9,7 @@
 <Jumbotron />
 
 <main>
-	<h1>Events</h1>
+	<h1>Upcoming Events</h1>
 	<section class="events">
 		{#each data.events.slice(0, 3) as event}
 			<a href="/articles/{event.slug}">
@@ -17,18 +17,24 @@
 			</a>
 		{/each}
 	</section>
-	
-	<h1>Acticles</h1>
+
+	<!-- <h1>Acticles</h1>
 	<section class="notices">
 		{#each data.notices.slice(0, 3) as notice}
 			<a href="/articles/{notice.slug}">
 				<Cards title={notice.title} description={notice.description} />
 			</a>
 		{/each}
-	</section>
+	</section> -->
 </main>
 
 <style>
+	h1 {
+		font-size: var(--text-6xl);
+		line-height: var(--text-6xl--line-height);
+		margin-top: var(--size-9);
+		justify-self: center;
+	}
 	.notices,
 	.events {
 		display: flex;

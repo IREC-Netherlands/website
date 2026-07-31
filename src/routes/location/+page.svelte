@@ -19,7 +19,13 @@
 				<br />
 			</div>
 			<div class="maps-frame">
-				<iframe title="location" width="99.9%" height="99.9%" loading="lazy" allowfullscreen src={maps_url}
+				<iframe
+					title="location"
+					width="99.9%"
+					height="99.9%"
+					loading="lazy"
+					allowfullscreen
+					src={maps_url}
 				></iframe>
 			</div>
 		</div>
@@ -41,9 +47,11 @@
 	}
 
 	.maps-frame {
-		width: 90%;
 		border-width: 1px;
 		border-color: rgba(63, 63, 63, 0.3);
-		aspect-ratio: var(--ratio-landscape);
+		aspect-ratio: var(--ratio-portrait);
+		@media (width >= 48rem) {
+			aspect-ratio: var(--ratio-landscape);
+		}
 	}
 </style>

@@ -36,9 +36,9 @@
 	}
 
 	iframe {
-		width: 99%;
-		height: 99%;
-		margin: var(--size-4);
+		width: 100%;
+		height: 100%;
+		margin: 1px;
 		align-items: center;
 	}
 </style>

@@ -28,7 +28,7 @@
 	];
 </script>
 
-<nav>
+<nav class="surface-4">
 	<a href="/" class="logo">
 		<img class="img-logo" src="/assets/logo/grii-logo.png" alt="GRII Belanda" />
 	</a>
@@ -51,16 +51,13 @@
 		padding-top: var(--size-1);
 		padding-bottom: var(--size-1);
 		padding-inline: var(--size-12);
-		background-color: var(--surface-4);
-		/* border-bottom-width: 1px; */
-		border-color: rgba(63, 63, 63, 0.3);
-		color: var(--text-3);
 
 		@media (min-width: 1440px) {
 			display: flex;
 			justify-content: space-between;
 
 			ul {
+				list-style-type: none;
 				align-items: center;
 				justify-items: center;
 			}
@@ -80,9 +77,8 @@
 
 		.hamburger {
 			display: none;
-			background-color: var(--surface-3);
-			margin-top: var(--size-1);
-			margin-bottom: var(--size-3);
+			background-color: transparent;
+			margin-block: var(--size-1);
 			@media (max-width: 768px) {
 				display: block;
 				justify-self: center;
@@ -90,10 +86,10 @@
 		}
 
 		.links {
-			margin-block: var(--size-7);
 			display: flex;
-			gap: var(--size-7);
+			margin-block: var(--size-7);
 			margin-block: 0;
+			gap: var(--size-7);
 
 			a {
 				color: inherit;
@@ -122,6 +118,7 @@
 				justify-self: center;
 				align-self: center;
 				text-align: center;
+				margin-block: var(--size-3);
 			}
 		}
 

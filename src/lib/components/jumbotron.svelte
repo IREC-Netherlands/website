@@ -1,13 +1,14 @@
 <script>
-	let title = 'IREC Netherlands (PRII)';
-	let subtitle = 'International Reformed Evangelical Church in the Netherlands';
-	let description =
+	const title = 'IREC Netherlands (PRII)';
+	const subtitle = 'International Reformed Evangelical Church in the Netherlands';
+	const description =
 		'We are Bible-believing, Reformed church that aims to share the Gospel to the people in the Netherlands. Join us every Sunday for worship.';
-	let buttonText = 'Our Location';
-	let buttonLink = 'https://maps.app.goo.gl/eN5qRN4VpHedyr7FA';
+	const buttonText = 'Our Location';
+	const buttonLink = 'https://maps.app.goo.gl/eN5qRN4VpHedyr7FA';
+	
 </script>
 
-<div class="jumbotron surface-4">
+<div class="jumbotron surface-4" >
 	<div class="text">
 		<p class="title">{title}</p>
 		<p class="subtitle">
@@ -20,7 +21,6 @@
 		<a href={buttonLink}>
 			<button>{buttonText}</button>
 		</a>
-
 	</div>
 </div>
 
@@ -34,11 +34,10 @@
 		display: flex;
 		flex-direction: column;
 		align-items: left;
-		color: var(--text-3);
 	}
 
 	.jumbotron .text {
-		max-width: var(--size-16);
+		max-width: var(--size-15);
 	}
 
 	.jumbotron .title {

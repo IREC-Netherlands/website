@@ -7,9 +7,13 @@
 </script>
 
 <div class="card">
-	<img src={image ? image : '/assets/logo/grii-icon.png'} alt={title} />
+	<img
+		class="rounded-lg shadow-sm object-cover hover:-translate-y-2 duration-300"
+		src={image ? image : '/assets/logo/grii-icon.png'}
+		alt={title}
+	/>
 	<div class="card-body">
-		<h2 class="card-title">{title}</h2>
+		<p class="card-title">{title}</p>
 		<p class="card-description">{description}</p>
 	</div>
 </div>
@@ -18,7 +22,7 @@
 	.card {
 		border: 1px solid #ddd;
 		overflow: hidden;
-		width: var(--size-14);
+		max-width: var(--size-14);
 		aspect-ratio: var(--ratio-portrait);
 		background-color: var(--surface-1);
 		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -40,8 +44,9 @@
 	}
 
 	.card-title {
-		font-size: 1.5rem;
-		font-weight: bold;
+		font-size: var(--text-lg);
+		line-height: var(--text-lg--line-height);
+		font-weight: 700;
 		margin: 0;
 	}
 
