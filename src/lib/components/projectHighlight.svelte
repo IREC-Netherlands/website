@@ -26,6 +26,7 @@
 		aspect-ratio: var(--ratio-landscape);
 		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 		transition: box-shadow 0.3s ease;
+		background-color: white;
 
 		@media (max-width: 768px) {
 			width: 100%;

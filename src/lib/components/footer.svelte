@@ -11,6 +11,7 @@
 		<p class="emphasize">Vierhovenkerk</p>
 		<p>Obrechtstraat 50</p>
 		<p>2625 XN, Delft</p>
+		<br>
 		<p>{config.title} &copy {new Date().getFullYear()}</p>
 	</div>
 </footer>
@@ -26,7 +27,7 @@
 		margin-top: var(--size-12);
 		padding-top: var(--size-13);
 		padding-bottom: var(--size-11);
-		padding-inline: var(--size-12);
+		padding-inline: var(--size-14);
 
 		vertical-align: bottom;
 

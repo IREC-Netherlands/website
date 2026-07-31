@@ -30,7 +30,7 @@
 
 <nav>
 	<a href="/" class="logo">
-		<img class="img-logo" src="/assets/logo/grii-logo-black.png" alt="GRII Belanda" />
+		<img class="img-logo" src="/assets/logo/grii-logo.png" alt="GRII Belanda" />
 	</a>
 
 	<button class="hamburger" onclick={toggleMenu}><Menu /></button>
@@ -51,7 +51,10 @@
 		padding-top: var(--size-1);
 		padding-bottom: var(--size-1);
 		padding-inline: var(--size-12);
-		background-color: var(--surface-1);
+		background-color: var(--surface-4);
+		/* border-bottom-width: 1px; */
+		border-color: rgba(63, 63, 63, 0.3);
+		color: var(--text-3);
 
 		@media (min-width: 1440px) {
 			display: flex;
@@ -107,7 +110,7 @@
 			}
 
 			li:hover:not(.active) {
-				border-bottom-color: rgb(128, 128, 128);
+				border-bottom-color: rgb(192, 192, 192);
 				transition: ease-in 0.2s;
 			}
 
@@ -128,7 +131,7 @@
 
 		li.active {
 			font-weight: var(--font-weight-6);
-			border-bottom-color: black;
+			border-bottom-color: rgb(255, 255, 255);
 		}
 
 		.logo {

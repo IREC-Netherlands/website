@@ -1,28 +1,28 @@
 <script lang="ts">
 	import '$lib/styles/pages.css';
+
+	const maps_url =
+		'https://www.google.com/maps/embed/v1/search?q=Vierhovenkerk%2C%20Obrechtstraat%2C%20Delft%2C%20Netherlands&key=AIzaSyDL6gW0lwVxvjiV7SZQ3qZ0cGOkiuYZLoU';
 </script>
 
 <main>
-	<h1>Location</h1>
-	<div class="locations">
-		<div class="contact-info">
-			<p class="title">International Reformed Evangelical Church in the Netherlands</p>
-			<p>
-				<b> Vierhovenkerk </b>
-				<br />Obrechtstraat 50
-				<br />2625 XN, Delft
-			</p>
-			<br />
+	<div class="prose">
+		<h1>Location</h1>
+		<div class="locations">
+			<div class="contact-info">
+				<p class="title">International Reformed Evangelical Church in the Netherlands</p>
+				<p>
+					<b> Vierhovenkerk </b>
+					<br />Obrechtstraat 50
+					<br />2625 XN, Delft
+				</p>
+				<br />
+			</div>
+			<div class="maps-frame">
+				<iframe title="location" width="99.9%" height="99.9%" loading="lazy" allowfullscreen src={maps_url}
+				></iframe>
+			</div>
 		</div>
-		<iframe
-			title="location"
-			width="800"
-			height="650"
-			style="border:0"
-			loading="lazy"
-			allowfullscreen
-			src="https://www.google.com/maps/embed/v1/search?q=Vierhovenkerk%2C%20Obrechtstraat%2C%20Delft%2C%20Netherlands&key=AIzaSyDL6gW0lwVxvjiV7SZQ3qZ0cGOkiuYZLoU"
-		></iframe>
 	</div>
 </main>
 
@@ -38,5 +38,12 @@
 	}
 	p {
 		margin-block: var(--size-2);
+	}
+
+	.maps-frame {
+		width: 90%;
+		border-width: 1px;
+		border-color: rgba(63, 63, 63, 0.3);
+		aspect-ratio: var(--ratio-landscape);
 	}
 </style>

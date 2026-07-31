@@ -27,7 +27,9 @@ main {
 /* Article Styling */
 .prose {
   background-color: var(--surface-1);
-  border-radius: var(--size-3);
+  border-radius: var(--size-2);
+  border-width: 1px;
+  border-color:  rgba(63, 63, 63, 0.3);
   margin-block: var(--size-5);
   padding-block: var(--size-5);
   padding-inline: var(--size-8);
@@ -42,7 +44,7 @@ main {
 		}
 
     a, a:active {
-      color: var(--text-3);
+      color: var(--text-2);
     }
     
     a:hover {

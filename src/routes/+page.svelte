@@ -11,16 +11,16 @@
 <main>
 	<h1>Events</h1>
 	<section class="events">
-		{#each data.events as event}
+		{#each data.events.slice(0, 3) as event}
 			<a href="/articles/{event.slug}">
 				<Cards title={event.title} description={event.description} />
 			</a>
 		{/each}
 	</section>
+	
 	<h1>Acticles</h1>
-
 	<section class="notices">
-		{#each data.notices as notice}
+		{#each data.notices.slice(0, 3) as notice}
 			<a href="/articles/{notice.slug}">
 				<Cards title={notice.title} description={notice.description} />
 			</a>

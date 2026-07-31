@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 html {
 	/* font */
 	--font-system-ui: 'Montserrat', sans-serif;
@@ -95,9 +97,9 @@ html,
 body {
 	min-height: 100%;
 	background:
-		linear-gradient(to right, #cccccc2d 1px, transparent 1px),
-		linear-gradient(to bottom, #cccccc2d 1px, transparent 1px);
-	background-size: 40px 40px; /* Adjust the grid cell size */
+		linear-gradient(to right, #cccccc70 1px, transparent 1px),
+		linear-gradient(to bottom, #cccccc70 1px, transparent 1px);
+	background-size: 30px 30px; /* Adjust the grid cell size */
 	background-position: 0 0;
 }
 
@@ -145,10 +147,10 @@ a:active {
 
 .surface-3 {
 	background-color: var(--surface-3);
-	color: var(--text-1);
+	color: var(--text-3);
 }
 
 .surface-4 {
 	background-color: var(--surface-4);
-	color: var(--text-1);
+	color: var(--text-3);
 }

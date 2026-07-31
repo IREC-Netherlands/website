@@ -9,12 +9,18 @@
 
 <div class="jumbotron surface-4">
 	<div class="text">
-		<p class='title'>{title}</p>
-		<p class="subtitle">{subtitle}</p>
+		<p class="title">{title}</p>
+		<p class="subtitle">
+			{subtitle}
+		</p>
 		<p>{description}</p>
+		<br>
+		<p class="footnote"><sup>*1</sup> PRII is the first out of three church growth stages in the Synod of IREC</p>
+
 		<a href={buttonLink}>
 			<button>{buttonText}</button>
 		</a>
+
 	</div>
 </div>
 
@@ -31,8 +37,8 @@
 		color: var(--text-3);
 	}
 
-	.jumbotron .text{
-		max-width: 500px
+	.jumbotron .text {
+		max-width: var(--size-16);
 	}
 
 	.jumbotron .title {
@@ -42,7 +48,7 @@
 
 	.jumbotron .subtitle {
 		font-size: 1.5rem;
-		font-weight: var(--font-weight-3);
+		font-weight: var(--font-weight-5);
 	}
 
 	.jumbotron p {
@@ -61,4 +67,8 @@
 		transition: background-color 0.1s;
 	}
 
+	.jumbotron .footnote {
+		font-size: var(--text-xs);
+	}
+	
 </style>
