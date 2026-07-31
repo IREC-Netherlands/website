@@ -52,12 +52,15 @@
 		padding-bottom: var(--size-1);
 		padding-inline: var(--size-12);
 
+		ul {
+			list-style-type: none;
+		}
+
 		@media (min-width: 1440px) {
 			display: flex;
 			justify-content: space-between;
 
 			ul {
-				list-style-type: none;
 				align-items: center;
 				justify-items: center;
 			}

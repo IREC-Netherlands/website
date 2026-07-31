@@ -22,11 +22,14 @@
 	.card {
 		border: 1px solid #ddd;
 		overflow: hidden;
-		max-width: var(--size-14);
 		aspect-ratio: var(--ratio-portrait);
 		background-color: var(--surface-1);
 		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 		transition: box-shadow 0.3s ease;
+
+		@media (width >= 40rem) {
+			max-width: var(--size-14);
+		}
 	}
 
 	.card:hover {

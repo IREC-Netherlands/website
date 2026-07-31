@@ -8,14 +8,13 @@
 	</a>
 	<div class="footer-content">
 		<div class="credits">
-			<p class="mb-2 font-extrabold">International Reformed Evangelical Church Netherlands</p>
+			<p class="mb-2 font-bold">International Reformed Evangelical Church Netherlands</p>
 			<p class="font-semibold">Vierhovenkerk</p>
 			<p>Obrechtstraat 50</p>
 			<p>2625 XN, Delft</p>
-			<br />
 		</div>
 		<div class="schedules">
-			<p class="mb-2 font-bold">Weekly Schedules:</p>
+			<p class="mb-2 font-bold">Weekly Schedules</p>
 			<p class="font-medium">Sunday Service</p>
 			<p class="mb-2">🕤 13:00 AMS Time (Sunday)</p>
 			<p class="font-medium">Bible Study</p>
@@ -80,9 +79,9 @@
 		}
 
 		.footer-content {
-			align-items: flex-start;
-			justify-content: space-between;
 			@media (min-width: 1440px) {
+				align-items: flex-start;
+				justify-content: space-between;
 				display: flex;
 				gap: var(--size-11);
 			}
