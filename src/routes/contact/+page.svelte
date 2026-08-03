@@ -3,7 +3,7 @@
 </script>
 
 <main>
-	<div class="prose">
+	<div>
 		<h1>Contact</h1>
 		<div class="descriptions">
 			<div class="contact-info">

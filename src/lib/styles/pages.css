@@ -1,13 +1,13 @@
 main {
-	padding-inline: var(--size-12);
-	padding-top: var(--size-7);
-	max-inline-size: 1440px;
 	justify-self: center;
 	height: 100%;
 	width: 100%;
-
-	@media (max-width: 768px) {
-		padding-inline: var(--size-5);
+	padding-inline: var(--size-3);
+	padding-top: var(--size-3);
+	
+	@media (width >= 768px) {
+		padding-inline: var(--size-12);
+		max-inline-size: 1440px;
 	}
 
 	/* Font spacing and styling */
@@ -30,15 +30,18 @@ main {
 /* Article Styling */
 .prose {
   background-color: var(--surface-1);
-  border-radius: var(--radius-xs);
-  border-color: rgba(63, 63, 63, 0.3);
+  border-radius: var(--radius-4xl);
+  border-color: rgba(63, 63, 63, 0.1);
   border-width: 1px;
   margin-block: var(--size-5);
   padding-block: var(--size-5);
-  padding-inline: var(--size-2);
+  padding-inline: var(--size-4);
 
-	@media (width >= 48rem) {
+	@media (width >= 1024px) {
+		margin-block: var(--size-5);
 		padding-inline: var(--size-8);
+		padding-block: var(--size-5);
+		padding-inline: var(--size-2);
 
 		p {
 			max-inline-size: none;

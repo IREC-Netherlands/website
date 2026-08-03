@@ -5,7 +5,7 @@ import type { Cat } from 'lucide-svelte';
 async function getPosts(category: string) {
 	let posts: Post[] = [];
 
-	const paths = import.meta.glob('../../../data/markdown/posts/*.md', { eager: true });
+	const paths = import.meta.glob('../../../../markdown/posts/*.md', { eager: true });
 
 	for (const path in paths) {
 		const file = paths[path];

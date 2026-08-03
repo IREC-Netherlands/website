@@ -4,7 +4,7 @@
 </script>
 
 <main>
-	<div class="prose">
+	<div>
 		<h1>Activities Bulletins</h1>
 		<section class="projects">
 			<ProjectHighlight />

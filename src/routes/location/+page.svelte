@@ -6,7 +6,7 @@
 </script>
 
 <main>
-	<div class="prose">
+	<div>
 		<h1>Location</h1>
 		<div class="locations">
 			<div class="contact-info">
