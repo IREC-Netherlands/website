@@ -69,7 +69,7 @@
 		border-top: 1px solid var(--border);
 
 		margin-top: var(--size-12);
-		padding-top: var(--size-13);
+		padding-top: var(--size-11);
 		padding-bottom: var(--size-11);
 		padding-inline: var(--size-14);
 
@@ -88,7 +88,7 @@
 
 			div {
 				max-width: var(--size-14);
-				margin-bottom: var(--size-5);
+				margin-bottom: var(--size-8);
 			}
 		}
 	}

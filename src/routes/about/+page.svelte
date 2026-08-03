@@ -8,15 +8,18 @@
 	let about = () => data.abouts.at(index)!.content;
 </script>
 
-<!-- <svelte:head>
-	<title>{data.meta.title}</title>
-	<meta property="og:type" content="article" />
-	<meta property="og:title" content={data.meta.title} />
-</svelte:head> -->
+<svelte:head>
+	<title>IREC Netherlands | About</title>
+	{#each data.abouts as about}
+		<meta property="og:type" content="article" />
+		<meta property="og:title" content={about.title} />
+	{/each}
+</svelte:head>
 
 <main>
 	<div class="sidebar">
 		<select bind:value={index} class="select">
+			<option disabled selected>Confessions of Faith:</option>
 			{#each data.abouts as about, i}
 				<option value={i}>
 					{about.title}
@@ -24,8 +27,9 @@
 			{/each}
 		</select>
 
+		<h2 class="side-menu">Confessions of Faith</h2>
 		{#each data.abouts as about, i}
-			<button onclick={() => (index = i)} class="button {index === i ? 'active' : ''}">
+			<button onclick={() => (index = i)} class="side-menu {index === i ? 'active' : ''}">
 				{about.title}
 			</button>
 		{/each}
@@ -60,7 +64,6 @@
 			}
 
 			flex: 0 0 250px;
-			padding-top: 5em;
 			border-right: 1px solid var(--surface-1);
 
 			& button {
@@ -94,7 +97,7 @@
 					display: block;
 				}
 
-				.button {
+				.side-menu {
 					display: none;
 				}
 			}
