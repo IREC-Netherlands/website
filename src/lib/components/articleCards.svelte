@@ -42,7 +42,7 @@
 		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 		align-items: center;
 
-		@media (max-width: 768px) {
+		@media (width < 768px) {
 			flex-direction: column;
 		}
 	}
@@ -93,7 +93,7 @@
 
 		> * {
 			padding: var(--size-2) var(--size-3);
-			border-radius: var(--radius-round);
+			border-radius: var(--radius-xl);
 		}
 	}
 

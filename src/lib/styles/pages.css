@@ -6,7 +6,7 @@ main {
 	padding-top: var(--size-3);
 	
 	@media (width >= 768px) {
-		padding-inline: var(--size-12);
+		padding-inline: var(--size-10);
 		max-inline-size: 1440px;
 	}
 

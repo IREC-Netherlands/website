@@ -5,6 +5,14 @@ html {
 	--font-system-ui: 'Montserrat', sans-serif;
 	--font-monospace-code: 'JetBrains Mono', monospace;
 
+	/* Screen sizes */
+	--screen-sm: 40rem; /*640px*/
+	--screen-md: 48rem; /*768px*/
+	--screen-lg: 64rem; /*1024px*/
+	--screen-xl: 80rem; /*1280px*/
+	--screen-2xl: 96rem; /*1536px*/
+
+
 	/* ratios */
 	--ratio-square: 1;
 	--ratio-landscape: 5/4;
@@ -105,7 +113,6 @@ html {
 	--background: var(--background-light);
 	--border: var(--border-light);
 }
-
 
 /* Default font and text configurations */
 html {

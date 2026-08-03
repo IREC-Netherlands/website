@@ -50,7 +50,7 @@
 		border-width: 1px;
 		border-color: rgba(63, 63, 63, 0.3);
 		aspect-ratio: var(--ratio-portrait);
-		@media (width >= 48rem) {
+		@media (width >= 768px) {
 			aspect-ratio: var(--ratio-landscape);
 		}
 	}

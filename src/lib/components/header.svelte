@@ -56,7 +56,7 @@
 			list-style-type: none;
 		}
 
-		@media (min-width: 1440px) {
+		@media (width > 1280px) {
 			display: flex;
 			justify-content: space-between;
 
@@ -66,7 +66,7 @@
 			}
 		}
 
-		@media (max-width: 1440px) {
+		@media (width < 1280px) {
 			display: grid;
 			grid-template-rows: auto auto auto;
 			justify-items: center;
@@ -74,7 +74,7 @@
 			padding-inline: var(--size-9);
 		}
 
-		@media (max-width: 768px) {
+		@media (width < 768px) {
 			row-gap: var(--size-0);
 		}
 
@@ -82,7 +82,7 @@
 			display: none;
 			background-color: transparent;
 			margin-block: var(--size-1);
-			@media (max-width: 768px) {
+			@media (width < 768px) {
 				display: block;
 				justify-self: center;
 			}
@@ -114,7 +114,7 @@
 			}
 
 			/* Mobile view */
-			@media (max-width: 768px) {
+			@media (width < 768px) {
 				display: none; /* become flex when toggled */
 				flex-direction: column;
 				gap: var(--size-2);

@@ -15,13 +15,22 @@
 </svelte:head> -->
 
 <main>
-	<aside>
+	<div class="sidebar">
+		<select bind:value={index} class="select">
+			{#each data.abouts as about, i}
+				<option value={i}>
+					{about.title}
+				</option>
+			{/each}
+		</select>
+
 		{#each data.abouts as about, i}
-		<button onclick={() => (index = i)} >
+			<button onclick={() => (index = i)} class="button {index === i ? 'active' : ''}">
 				{about.title}
 			</button>
 		{/each}
-	</aside>
+	</div>
+
 	<article>
 		<div class="content">
 			{#each data.abouts.slice(index, index + 1) as about}
@@ -35,22 +44,59 @@
 <style>
 	main {
 		display: flex;
-		gap: 20px;
+		gap: 10px;
 
-		& aside {
-			display: block;
+		.sidebar {
+			.select {
+				display: none;
+				width: 100%;
+				font-size: var(--text-md);
+				line-height: var(--text-md--line-height);
+				border: 1px solid black;
+				border-radius: var(--radius-xl);
+				padding-block: 1em;
+				font-weight: var(--font-weight-medium);
+				margin-bottom: 2em;
+			}
+
+			flex: 0 0 250px;
 			padding-top: 5em;
-			border-right: 1px solid  rgba(235, 224, 224, 1);
+			border-right: 1px solid var(--surface-1);
 
 			& button {
-				padding-block: 10px;
-				width: 250px;
+				padding-inline: var(--size-2);
+				padding-block: var(--size-3);
 				text-align: left;
+				width: 100%;
+
+				&.active {
+					background-color: var(--surface-1);
+				}
 			}
 
 			& button:hover {
-				background-color: rgba(235, 224, 224, 0.3);
-				transition: ease-in 0.1s;
+				background-color: var(--surface-1);
+				transition: ease-in 0.2s;
+			}
+		}
+
+		& article {
+			flex: 1;
+		}
+
+		@media (width <= 768px) {
+			display: block;
+
+			.sidebar {
+				padding-top: 0;
+
+				.select {
+					display: block;
+				}
+
+				.button {
+					display: none;
+				}
 			}
 		}
 	}

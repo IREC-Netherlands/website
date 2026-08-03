@@ -42,7 +42,7 @@
 		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 		align-items: center;
 
-		@media (max-width: 768px) {
+		@media (width < 768px) {
 			flex-direction: column;
 		}
 	}
@@ -74,7 +74,7 @@
 		display: flex;
 		margin-bottom: 10px;
 
-		@media (max-width: 768px) {
+		@media (width < 768px) {
 			flex-direction: column;
 		}
 

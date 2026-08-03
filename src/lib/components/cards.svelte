@@ -27,7 +27,7 @@
 		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 		transition: box-shadow 0.3s ease;
 
-		@media (width >= 40rem) {
+		@media (width >= 640px) {
 			max-width: var(--size-14);
 		}
 	}

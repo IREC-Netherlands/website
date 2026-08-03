@@ -5,18 +5,19 @@
 		'We are Bible-believing, Reformed church that aims to share the Gospel to the people in the Netherlands. Join us every Sunday for worship.';
 	const buttonText = 'Our Location';
 	const buttonLink = 'https://maps.app.goo.gl/eN5qRN4VpHedyr7FA';
-	
 </script>
 
-<div class="jumbotron surface-4" >
+<div class="jumbotron surface-4">
 	<div class="text">
 		<p class="title">{title}</p>
 		<p class="subtitle">
 			{subtitle}
 		</p>
 		<p>{description}</p>
-		<br>
-		<p class="footnote"><sup>*1</sup> PRII is the first out of three church growth stages in the Synod of IREC</p>
+		<br />
+		<p class="footnote">
+			<sup>*1</sup> PRII is the first out of three church growth stages in the Synod of IREC
+		</p>
 
 		<a href={buttonLink}>
 			<button>{buttonText}</button>
@@ -57,17 +58,21 @@
 	.jumbotron button {
 		margin-top: 40px;
 		padding: 10px 15px;
-		font-weight: var(--font-weight-4);
+		font-weight: var(--font-weight-medium);
 		color: var(--text-1);
 		background-color: var(--surface-1);
 		border: none;
-		border-radius: 5px;
+		border-radius: var(--radius-xl);
 		cursor: pointer;
 		transition: background-color 0.1s;
+
+		&:hover {
+			font-weight: var(--font-weight-semibold);
+			box-shadow: var(--shadow-md);
+		}
 	}
 
 	.jumbotron .footnote {
 		font-size: var(--text-xs);
 	}
-	
 </style>

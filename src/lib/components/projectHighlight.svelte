@@ -28,7 +28,7 @@
 		transition: box-shadow 0.3s ease;
 		background-color: white;
 
-		@media (max-width: 768px) {
+		@media (width < 768px) {
 			width: 100%;
 		}
 	}

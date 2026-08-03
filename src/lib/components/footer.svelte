@@ -74,12 +74,12 @@
 		padding-inline: var(--size-14);
 
 		vertical-align: bottom;
-		@media (max-width: 768px) {
+		@media (width < 768px) {
 			padding-inline: var(--size-5);
 		}
 
 		.footer-content {
-			@media (min-width: 1440px) {
+			@media (width > 1280px) {
 				align-items: flex-start;
 				justify-content: space-between;
 				display: flex;
