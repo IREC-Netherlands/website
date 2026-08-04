@@ -30,7 +30,6 @@
 	</a>
 	<div class="link-section">
 		<button
-			transition:fly
 			onclick={() => {
 				isOpen = !isOpen;
 			}}
@@ -104,7 +103,6 @@
 
 		button {
 			display: none;
-			background-color: transparent;
 			margin-block: var(--size-1);
 			padding-bottom: var(--size-1);
 
