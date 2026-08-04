@@ -84,7 +84,7 @@
 		padding-bottom: var(--size-11);
 		padding-inline: var(--size-13);
 
-		justify-items: center;
+		justify-items: start;
 		vertical-align: bottom;
 		@media (width < 768px) {
 			padding-inline: var(--size-5);
@@ -95,10 +95,10 @@
 		}
 
 		.footer-content {
-
 			@media (width > 1280px) {
 				align-items: flex-start;
 				justify-content: space-between;
+				justify-items: center;
 				display: flex;
 				gap: var(--size-11);
 			}
