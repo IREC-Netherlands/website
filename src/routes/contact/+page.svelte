@@ -1,7 +1,6 @@
 <script lang="ts">
 	import '$lib/styles/pages.css';
 	import ContactForm from './contactForm.svelte';
-
 </script>
 
 <main>
@@ -16,11 +15,7 @@
 					</p>
 					<br />
 					<p class="title">International Reformed Evangelical Church in the Netherlands</p>
-					<p>
-						<b> Vierhovenkerk </b>
-						<br />Obrechtstraat 50
-						<br />2625 XN, Delft
-					</p>
+					<p class="italic"><a href="mailto:contact@irec-netherlands.org">contact@irec-netherlands.org</a></p>
 					<br />
 				</div>
 			</div>
@@ -30,7 +25,6 @@
 </main>
 
 <style>
-
 	.contact {
 		display: flex;
 		gap: var(--size-3);
@@ -44,6 +38,10 @@
 
 	.contact-info {
 		max-width: var(--size-14);
+	}
+
+	a:hover {
+		font-weight: var(--font-weight-medium);
 	}
 
 	p {

@@ -3,61 +3,72 @@
 </script>
 
 <footer>
-	<a href="/" class="logo">
-		<img class="img-logo" src="/assets/logo/grii-logo.png" alt="GRII Belanda" />
-	</a>
-	<div class="footer-content">
-		<div class="credits">
-			<p class="mb-2 font-bold">International Reformed Evangelical Church Netherlands</p>
-			<p class="font-semibold">Vierhovenkerk</p>
-			<p>Obrechtstraat 50</p>
-			<p>2625 XN, Delft</p>
+	<div class="footer-main">
+		<a href="/" class="logo">
+			<img class="img-logo" src="/assets/logo/grii-logo.png" alt="GRII Belanda" />
+		</a>
+		<div class="footer-content">
+			<div class="credits">
+				<p class="mb-2 font-bold">International Reformed Evangelical Church Netherlands</p>
+				<p class="font-semibold">Vierhovenkerk</p>
+				<p>Obrechtstraat 50</p>
+				<p>2625 XN, Delft</p>
+			</div>
+			<div class="schedules">
+				<p class="mb-2 font-bold">Weekly Schedules</p>
+				<p class="font-medium">Sunday Service</p>
+				<p class="mb-2">🕤 13:00 AMS Time (Sunday)</p>
+				<p class="font-medium">Bible Study</p>
+				<p class="mb-2">🕤 11:00 AMS Time (Saturday)</p>
+				<p class="font-medium">Prayer Meeting</p>
+				<p class="mb-2">🕤 19:00 AMS Time (Wednesday)</p>
+			</div>
+			<div class="quicklinks">
+				<p class="font-bold">Partners Quicklinks</p>
+				<ol>
+					<li>
+						<a href="https://grii.org/" target="_blank" rel="noopener noreferrer">IREC Global</a>
+					</li>
+					<li>
+						<a href="https://irec-europe.org/" target="_blank" rel="noopener noreferrer"
+							>IREC Europe</a
+						>
+					</li>
+					<li>
+						<a href="https://pusat.grii.org/" target="_blank" rel="noopener noreferrer"
+							>IREC Headquarter</a
+						>
+					</li>
+					<li>
+						<a href="https://stemi.org/" target="_blank" rel="noopener noreferrer">STEMI</a>
+					</li>
+					<li>
+						<a href="https://www.recjakarta.com/" target="_blank" rel="noopener noreferrer"
+							>REC Jakarta</a
+						>
+					</li>
+					<li>
+						<a href="https://www.reformed21.tv/" target="_blank" rel="noopener noreferrer"
+							>Reformed 21</a
+						>
+					</li>
+					<li>
+						<a href="https://plkmomentum.com/" target="_blank" rel="noopener noreferrer"
+							>Momentum Christian Literature</a
+						>
+					</li>
+					<li>
+						<a
+							href="https://front.aulasimfoniajakarta.com/"
+							target="_blank"
+							rel="noopener noreferrer">Aula Simfonia Jakarta</a
+						>
+					</li>
+				</ol>
+			</div>
 		</div>
-		<div class="schedules">
-			<p class="mb-2 font-bold">Weekly Schedules</p>
-			<p class="font-medium">Sunday Service</p>
-			<p class="mb-2">🕤 13:00 AMS Time (Sunday)</p>
-			<p class="font-medium">Bible Study</p>
-			<p class="mb-2">🕤 11:00 AMS Time (Saturday)</p>
-			<p class="font-medium">Prayer Meeting</p>
-			<p class="mb-2">🕤 19:00 AMS Time (Wednesday)</p>
-		</div>
-		<div class="quicklinks">
-			<p class="font-bold">Partners Quicklinks</p>
-			<ol>
-				<li>
-					<a href="https://grii.org/" target="_blank" rel="noopener noreferrer">IREC Global</a>
-				</li>
-				<li>
-					<a href="https://pusat.grii.org/" target="_blank" rel="noopener noreferrer">GRII Pusat</a>
-				</li>
-				<li>
-					<a href="https://stemi.org/" target="_blank" rel="noopener noreferrer">STEMI</a>
-				</li>
-				<li>
-					<a href="https://www.recjakarta.com/" target="_blank" rel="noopener noreferrer"
-						>REC Jakarta</a
-					>
-				</li>
-				<li>
-					<a href="https://www.reformed21.tv/" target="_blank" rel="noopener noreferrer"
-						>Reformed 21</a
-					>
-				</li>
-				<li>
-					<a href="https://plkmomentum.com/" target="_blank" rel="noopener noreferrer"
-						>Momentum Christian Literature</a
-					>
-				</li>
-				<li>
-					<a href="https://front.aulasimfoniajakarta.com/" target="_blank" rel="noopener noreferrer"
-						>Aula Simfonia Jakarta</a
-					>
-				</li>
-			</ol>
-		</div>
+		<p>{config.title} &copy {new Date().getFullYear()}</p>
 	</div>
-	<p>{config.title} &copy {new Date().getFullYear()}</p>
 </footer>
 
 <style>
@@ -71,14 +82,20 @@
 		margin-top: var(--size-12);
 		padding-top: var(--size-11);
 		padding-bottom: var(--size-11);
-		padding-inline: var(--size-14);
+		padding-inline: var(--size-13);
 
+		justify-items: center;
 		vertical-align: bottom;
 		@media (width < 768px) {
 			padding-inline: var(--size-5);
 		}
 
+		.footer-main {
+			max-inline-size: 1280px;
+		}
+
 		.footer-content {
+
 			@media (width > 1280px) {
 				align-items: flex-start;
 				justify-content: space-between;
@@ -87,7 +104,7 @@
 			}
 
 			div {
-				max-width: var(--size-14);
+				width: var(--size-14);
 				margin-bottom: var(--size-8);
 			}
 		}
@@ -101,7 +118,7 @@
 	:is(ol) {
 		padding: 0;
 	}
-	
+
 	:is(li) {
 		list-style-type: circle;
 		list-style-position: inside;
