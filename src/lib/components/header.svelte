@@ -25,7 +25,13 @@
 </script>
 
 <nav class="surface-4">
-	<a href="/" class="logo">
+	<a
+		href="/"
+		class="logo"
+		onclick={() => {
+			isOpen = false;
+		}}
+	>
 		<img class="img-logo" src="/assets/logo/grii-logo.png" alt="GRII Belanda" />
 	</a>
 	<div class="link-section">
@@ -76,6 +82,7 @@
 		}
 
 		ul {
+			padding: 0;
 			list-style-type: none;
 		}
 
@@ -83,7 +90,6 @@
 			display: flex;
 			justify-content: space-between;
 			padding-inline: var(--size-12);
-
 			ul {
 				align-items: center;
 				justify-items: center;
@@ -126,17 +132,6 @@
 				width: fit-content;
 			}
 
-			li {
-				border-bottom-width: 2.5px;
-				border-bottom-color: transparent;
-				border-bottom-style: inset;
-			}
-
-			li:hover:not(.active) {
-				border-bottom-color: rgb(192, 192, 192);
-				transition: ease-in 0.2s;
-			}
-
 			/* Mobile view */
 			@media (width < 768px) {
 				display: none; /* become flex when toggled */
@@ -156,9 +151,21 @@
 			position: absolute;
 		}
 
+		li {
+			border-bottom-width: 2.5px;
+			border-bottom-color: transparent;
+			border-bottom-style: inset;
+			padding: var(--size-1);
+		}
+
 		li.active {
 			font-weight: var(--font-weight-6);
 			border-bottom-color: rgb(255, 255, 255);
+		}
+
+		li:hover:not(.active) {
+			border-bottom-color: rgb(192, 192, 192);
+			transition: ease-in 0.2s;
 		}
 
 		.logo {

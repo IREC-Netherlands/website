@@ -115,7 +115,7 @@ html {
 	--border: var(--border-light);
 }
 
-@source "../node_modules/flowbite-svelte/dist";
+@source '../node_modules/flowbite-svelte/dist';
 
 /* Default font and text configurations */
 html {
@@ -131,15 +131,19 @@ html {
 	overflow-y: scroll;
 }
 
-ul,
 ol {
+	list-style: decimal;
+	padding-left: var(--size-8);
+}
+
+ul {
 	list-style: circle;
-	list-style-position: inside;
-	padding: 4px;
+	padding-left: var(--size-8);
 }
 
 li {
-	padding-inline-start: 4px;
+	margin-block: var(--size-0);
+	max-inline-size: none;
 }
 
 a,
@@ -205,4 +209,3 @@ a:active {
 	font-size: var(--text-lg);
 	line-height: var(--text-lg--line-height);
 }
-

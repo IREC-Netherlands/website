@@ -1,5 +1,5 @@
 ---
-title: Reformed Evangelical Confession of Faith
+title: Reformed Evangelical Creed
 language: EN
 ---
 

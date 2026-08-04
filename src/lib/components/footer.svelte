@@ -97,4 +97,14 @@
 		max-width: var(--size-13);
 		margin-block: var(--size-5);
 	}
+
+	:is(ol) {
+		padding: 0;
+	}
+	
+	:is(li) {
+		list-style-type: circle;
+		list-style-position: inside;
+		padding: 0;
+	}
 </style>

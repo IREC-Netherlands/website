@@ -20,16 +20,28 @@
 <main>
 	<div class="sidebar">
 		<select bind:value={index} class="select">
-			<option disabled selected>Reformed Evangelical Movement:</option>
 			{#each data.abouts as about, i}
+				{#if about.slug.slice(0, 2) === '00'}
+					<option disabled selected>Our Church:</option>
+				{:else if about.slug.slice(0, 2) === '10'}
+					<option disabled selected>Reformed Evangelical Movement:</option>
+				{:else if about.slug.slice(0, 2) === '20'}
+					<option disabled selected>Creeds and Confessions:</option>
+				{/if}
 				<option value={i}>
 					{about.title}
 				</option>
 			{/each}
 		</select>
 
-		<h2 class="side-menu">Reformed Evangelical Movement</h2>
 		{#each data.abouts as about, i}
+			{#if about.slug.slice(0, 2) === '00'}
+				<h3 class="side-menu">Our Church</h3>
+			{:else if about.slug.slice(0, 2) === '10'}
+				<h3 class="side-menu">Reformed Evangelical Movement</h3>
+			{:else if about.slug.slice(0, 2) === '20'}
+				<h3 class="side-menu">Creeds and Confessions</h3>
+			{/if}
 			<button onclick={() => (index = i)} class="side-menu {index === i ? 'active' : ''}">
 				{about.title}
 			</button>
