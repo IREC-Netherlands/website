@@ -2,7 +2,7 @@
 	import '$lib/styles/pages.css';
 	import '$lib/styles/classic.css';
 
-	import { fade, fly } from 'svelte/transition';
+	import { fly } from 'svelte/transition';
 	let { data } = $props();
 	let index = $state(0);
 
@@ -20,7 +20,7 @@
 <main>
 	<div class="sidebar">
 		<select bind:value={index} class="select">
-			<option disabled selected>Confessions of Faith:</option>
+			<option disabled selected>Reformed Evangelical Movement:</option>
 			{#each data.abouts as about, i}
 				<option value={i}>
 					{about.title}
@@ -28,7 +28,7 @@
 			{/each}
 		</select>
 
-		<h2 class="side-menu">Confessions of Faith</h2>
+		<h2 class="side-menu">Reformed Evangelical Movement</h2>
 		{#each data.abouts as about, i}
 			<button onclick={() => (index = i)} class="side-menu {index === i ? 'active' : ''}">
 				{about.title}
@@ -39,7 +39,7 @@
 	<article>
 		{#key index}
 			{const about = data.abouts.at(index)!}
-			<div transition:fly class="content">
+			<div in:fly={{ x: -10 }} class="content">
 				<h1>{about.title}</h1>
 				<about.content />
 			</div>

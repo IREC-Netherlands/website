@@ -1,12 +1,8 @@
 <script lang="ts">
 	import { activePage } from '$lib/state/activePage.svelte';
-	import { Menu } from 'lucide-svelte';
+	import { Menu, X } from 'lucide-svelte';
 	import { fly } from 'svelte/transition';
-
 	let isOpen = $state(false);
-	function toggleMenu() {
-		isOpen = !isOpen;
-	}
 
 	const navigator = [
 		{
@@ -33,11 +29,26 @@
 		<img class="img-logo" src="/assets/logo/grii-logo.png" alt="GRII Belanda" />
 	</a>
 	<div class="link-section">
+		<button
+			transition:fly
+			onclick={() => {
+				isOpen = !isOpen;
+			}}
+			>{#if isOpen}
+				<X />
+			{:else}
+				<Menu />
+			{/if}
+		</button>
 		{#key isOpen}
-			<button class="hamburger" onclick={toggleMenu}><Menu /></button>
-			<ul in:fly={{ y: -100 }} class="links {isOpen ? 'open' : ''}">
+			<ul transition:fly={{ y: -100 }} class="links {isOpen ? 'open' : ''}">
 				{#each navigator as nav}
-					<a href={nav.anchor}>
+					<a
+						href={nav.anchor}
+						onclick={() => {
+							isOpen = false;
+						}}
+					>
 						<li class={nav.title === activePage.page ? 'active' : ''}>
 							{nav.title}
 						</li>
@@ -51,7 +62,6 @@
 <style>
 	nav {
 		padding-top: var(--size-1);
-		padding-bottom: var(--size-1);
 		position: relative;
 
 		.link-section {
@@ -92,10 +102,12 @@
 			row-gap: var(--size-0);
 		}
 
-		.hamburger {
+		button {
 			display: none;
 			background-color: transparent;
 			margin-block: var(--size-1);
+			padding-bottom: var(--size-1);
+
 			@media (width < 768px) {
 				display: block;
 				justify-self: center;
@@ -134,7 +146,7 @@
 				justify-self: center;
 				text-align: center;
 				margin-bottom: var(--size-3);
-				background-color: var(--surface-4);
+				background-color: rgba(0, 0, 0, 0.8);
 				gap: var(--size-2);
 				width: 100%;
 				z-index: 1;

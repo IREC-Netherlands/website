@@ -3,7 +3,7 @@ title: Reformed Evangelical Confession of Faith
 language: EN
 ---
 
-### The Triune God
+## The Triune God
 
 We believe in one living and true God, eternal and self-sufficient in His existence, who
 transcends and precedes all creation. In His eternity, the One God exists in three distinct
@@ -24,7 +24,7 @@ destruction. God is Spirit, unlimited, indivisible, immutable, omnipotent, omnis
 in His decisions, His righteousness, His gentleness, and His mercy. The general revelation of
 God in creation is enough to reveal who God is.
 
-### The Bible
+## The Bible
 
 We believe that the fall of man made the Bible the special revelation of God absolutely
 necessary for man to gain the knowledge of God and His will necessary for his salvation. The
@@ -43,7 +43,7 @@ teaching, for reproof, for correction, and for training people in righteousness.
 sole and absolute authority for personal faith and life, the church, and also the testimony of
 God’s people in society until Christ returns.
 
-### Human being
+## Human being
 
 We believe that the first human being, Adam, was uniquely created as body and spirit/soul in
 the image and likeness of God and was created with true holiness, righteousness, and
@@ -57,7 +57,7 @@ to work and keep God’s creation for God’s glory. As a faithful covenant keep
 that all aspects of human life be lived under God’s command as an expression of obedience to
 God’s laws.
 
-### Sin
+## Sin
 
 We believe that Adam failed in his personal obedience to God by breaking God’s command. Adam’s
 fall resulted in the image of God being corrupted, so that all aspects of human life were
@@ -68,7 +68,7 @@ subjected to futility. Spiritually dead and separated from the Triune God, human
 God’s just wrath, without hope and without help for salvation, either from themselves or from
 creation.
 
-### Covenant of grace
+## Covenant of grace
 
 We believe that God in eternity made a covenant for His chosen people, with Jesus Christ as
 Mediator. As the second and last Adam, Jesus Christ gave His perfect personal obedience to
@@ -80,7 +80,7 @@ perfect obedience of Christ. Through the power of Christ’s resurrection, God c
 and gather His people from all ages and nations to be a royal priesthood and a holy nation for
 His glory.
 
-### Jesus Christ
+## Jesus Christ
 
 We believe in Jesus Christ, the second Person of the Trinity, true God and true man, the only
 Savior of mankind who fulfilled God the Father’s plan of salvation for God’s chosen people.
@@ -104,7 +104,7 @@ Shepherd who gives the abundance of His life through His self-sacrifice for His 
 we can enjoy that abundance in a sacrificial life like Him. Christ will return in His
 glorified body, visibly and suddenly, to judge the living and the dead.
 
-### Holy Spirit
+## Holy Spirit
 
 We believe in the Holy Spirit, the third Person of the Trinity, the Divine Inspirer of the
 Bible, who comes to apply the salvation accomplished by the Son of God to the elect of God.
@@ -116,7 +116,7 @@ bestows gifts for the service of the saints for the good of the Church of Christ
 intercedes for believers with groanings too deep for words for and until the day of the
 glorification of the people of God.
 
-### Moral responsibility and good works
+## Moral responsibility and good works
 
 We believe that although God has ordained all things, including the salvation of human, God’s
 decree does not make God the author of sin and eliminate human free will. Moreover, humans are
@@ -126,7 +126,7 @@ inseparable from good works, hope, and love. This saving faith will bring forth 
 works in the children of God, namely, good works that are in accordance with God’s holiness,
 pleasing to God, commanded by God in His Word, and for the glory of God.
 
-### Church
+## Church
 
 We believe in one holy and catholic Church, consisting of all God’s elect of all times,
 revealed through the once-for-all event of Pentecost, and part of which is now absorbed in the
@@ -137,7 +137,7 @@ teaching the Word of God, administering baptism and the Lord’s Supper, fellows
 discipline in love, service and mission, and by prioritizing unity among the various local
 churches and denominations based on the truth in the bond of love.
 
-### Sacrament
+## Sacrament
 
 We acknowledge the two sacraments ordained by God for the Church, holy baptism and holy
 communion. The sacrament is not the gift, but a seal of the covenant of God’s grace to human,
@@ -154,7 +154,7 @@ Communion is performed for those who have been able to judge themselves truly. A
 sacrament is not a gift, when accompanied by the preaching of the Word of God and accepted
 with faith, the sacrament has an absolutely necessary part in the life of a child of God.
 
-### Mission
+## Mission
 
 We believe that the Church is in the world to witness the lordship of Christ. Until Christ
 returns to complete the fulfillment of His Kingdom, the Church carries out the mission of
@@ -165,7 +165,7 @@ to proclaim God’s redemptive shalom to all creation by advocating for God’s 
 holiness for all people, expressing social and environmental concerns, and through other
 concrete actions.
 
-### End times
+## End times
 
 We believe and look forward to the new heavens and new earth, the holy city of God that will
 descend from heaven to earth, through the visible second coming of Christ in power and glory.
