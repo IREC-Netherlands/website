@@ -1,0 +1,25 @@
+---
+title: The Calling of The Reformed Evangelical Movement
+language: EN
+---
+
+_written by: Rev. Dr. Stephen Tong_
+
+Is it not true that many leaders of churches who received education in Reformed theological schools in the USA, the Netherlands, and many other places have returned to serve in Indonesia? Is it not true that they are the people who should lead churches back to the spirit of Reformation, raise the awareness of Christians to nurture the faith that had been passed down to us, and fight in the world full of ideologies opposing the Scripture?
+
+After waiting for around 20 years, I felt we could not wait anymore – Even though I have been teaching the Reformed doctrine since 1964 in the theological school where I served and molded a Reformed ideology in the students’ minds. The calling to establish this Reformed Evangelical movement became clearer and more urgent after I caught Hepatitis B in 1984.
+
+Life is but temporary. Even though I have served for about 27 years, with the understanding I gained during my suffering under that kind of liver infection, I thought maybe I can survive in this world for only about 15 to 20 more years. Therefore, I cannot wait for anybody else and I started earnestly praying, surrendering myself once more to establish the Reformed Evangelical Movement in Indonesia. I prayed to the Lord so that within 15 years, approaching the 21st century, there will be a group from the younger generation who understand and realizes the importance of the Reformed Evangelical Movement and willfully surrender themselves to serve and to sacrifice themselves in this era.
+
+My response to this calling was blessed by God, so that in 1984, the first step was started, which is by bravely hosting the Christian Faith Building Seminar (SPIK) to pioneer the Reformed doctrine. Unexpectedly, the number of participants kept increasing and with great enthusiasm they accepted the Reformed doctrine taught to them.
+
+The SPIK movement that was started in 1984 became a lively movement until today, both in Indonesia and abroad. They who had been awakened made the decision to study the Reformed doctrine further. Therefore, the second step of this calling was to establish the Reformed Evangelical Theological School (STRI) for laypeople in 1986.
+
+
+## How did this movement begin?
+
+Every steps this movement took have been guided by God through the obedience of His servants. Therefore, we planned (in the Reformed theology aspect): Firstly, to form as many populaces as possible who are aware of and experience the Reformed Evangelical teaching. This is realized in the form of Christian Faith Building Seminar (SPIK). Secondly, we planned to filter and gather a group of laypeople who strive to study the Reformed theology systematically and consistenly. This is realized in the form of the Reformed Evangelical Theological School (STRI). Thirdly, it is to build a library that provides quality books to fill the need of people who want to learn more about the truth and believe that this movement is universal and influential in history. Fourth, to build a theological school and Institute to prepare full-time servants of God for the next generation. Fifth, with the correct theological understanding, to build churches and evangelical posts to be a vessel for servants of God to teach the Reformed theology courageously and shepherd God’s elects. Sixth, to translate and publish Reformed theological books.
+
+Meanwhile, the plans in the Evangelization aspect covers: Firstly, to conduct mass evangelization and to directly face the needs of the society, as well as to teach people to repent and accept the invitation to be a Christian. Secondly, to conduct a discipleship in evangelizing to train individuals who are called to expand the Kingdom of God through personal evangelization, therefore mobilizing Christians to be vessels to channel God’s grace for the society. Thirdly, to train full-time evangelists in theological schools to prepare servants of God who are talented and specially burdened in evangelization. Fourth, to prepare Gospel posts to accomodate the fruits of evangelization towards pastoral and churchly life.
+
+The Reformed Evangelical Movement is different from the Reformed Evangelical church and denomination. The Reformed Evangelical Movement is intended to be an impetus for every denomination and can belong to all churches outside the Reformed Evangelical Church, so that churches are revived and directed to the true theology and the true evangelical spirit. However, the Reformed Evangelical Movement does not rule out the possiblility for servants of God with Reformed Evangelical theology to establish a Reformed Evangelical Church as a platform in the Kingdom of God which accompanies other churches in accomplishing their tasks and callings as the body of Christ.

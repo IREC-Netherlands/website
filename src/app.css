@@ -1,4 +1,6 @@
 @import 'tailwindcss';
+@plugin 'flowbite/plugin';
+@custom-variant dark (&:where(.dark, .dark *));
 
 html {
 	/* font */
@@ -113,6 +115,8 @@ html {
 	--border: var(--border-light);
 }
 
+@source "../node_modules/flowbite-svelte/dist";
+
 /* Default font and text configurations */
 html {
 	color: var(--text-1);
@@ -201,3 +205,4 @@ a:active {
 	font-size: var(--text-lg);
 	line-height: var(--text-lg--line-height);
 }
+

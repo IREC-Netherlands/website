@@ -2,7 +2,7 @@
 	const title = 'IREC Netherlands (PRII)';
 	const subtitle = 'International Reformed Evangelical Church in the Netherlands';
 	const description =
-		'We are Bible-believing, Reformed church that aims to share the Gospel to the people in the Netherlands. Join us every Sunday for worship.';
+		'We are a Bible-believing, Reformed church that aims to share the Gospel to the people in the Netherlands. Join us every Sunday for worship.';
 	const buttonText = 'Our Location';
 	const buttonLink = 'https://maps.app.goo.gl/eN5qRN4VpHedyr7FA';
 </script>

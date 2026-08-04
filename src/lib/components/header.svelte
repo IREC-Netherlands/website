@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { activePage } from '$lib/state/activePage.svelte';
-	import * as config from '$lib/config';
 	import { Menu } from 'lucide-svelte';
+	import { fly } from 'svelte/transition';
 
 	let isOpen = $state(false);
 	function toggleMenu() {
@@ -18,7 +18,7 @@
 			anchor: '/activities'
 		},
 		{
-			title: 'Locations',
+			title: 'Location',
 			anchor: '/location'
 		},
 		{
@@ -32,25 +32,39 @@
 	<a href="/" class="logo">
 		<img class="img-logo" src="/assets/logo/grii-logo.png" alt="GRII Belanda" />
 	</a>
-
-	<button class="hamburger" onclick={toggleMenu}><Menu /></button>
-
-	<ul class="links {isOpen ? 'open' : ''}">
-		{#each navigator as nav}
-			<a href={nav.anchor} onclick={toggleMenu}>
-				<li class={nav.title === activePage.page ? 'active' : ''}>
-					{nav.title}
-				</li>
-			</a>
-		{/each}
-	</ul>
+	<div class="link-section">
+		{#key isOpen}
+			<button class="hamburger" onclick={toggleMenu}><Menu /></button>
+			<ul in:fly={{ y: -100 }} class="links {isOpen ? 'open' : ''}">
+				{#each navigator as nav}
+					<a href={nav.anchor}>
+						<li class={nav.title === activePage.page ? 'active' : ''}>
+							{nav.title}
+						</li>
+					</a>
+				{/each}
+			</ul>
+		{/key}
+	</div>
 </nav>
 
 <style>
 	nav {
 		padding-top: var(--size-1);
 		padding-bottom: var(--size-1);
-		padding-inline: var(--size-12);
+		position: relative;
+
+		.link-section {
+			display: block;
+			width: 100%;
+			align-self: center;
+			justify-items: center;
+			padding: 0;
+			margin: 0;
+			@media (width > 1280px) {
+				justify-items: right;
+			}
+		}
 
 		ul {
 			list-style-type: none;
@@ -59,6 +73,7 @@
 		@media (width > 1280px) {
 			display: flex;
 			justify-content: space-between;
+			padding-inline: var(--size-12);
 
 			ul {
 				align-items: center;
@@ -71,7 +86,6 @@
 			grid-template-rows: auto auto auto;
 			justify-items: center;
 			row-gap: var(--size-7);
-			padding-inline: var(--size-9);
 		}
 
 		@media (width < 768px) {
@@ -90,9 +104,8 @@
 
 		.links {
 			display: flex;
-			margin-block: var(--size-7);
-			margin-block: 0;
 			gap: var(--size-7);
+			align-items: center;
 
 			a {
 				color: inherit;
@@ -100,6 +113,7 @@
 				white-space: nowrap;
 				font-size: var(--font-size-1);
 				font-weight: var(--font-weight-5);
+				width: fit-content;
 			}
 
 			li {
@@ -117,16 +131,19 @@
 			@media (width < 768px) {
 				display: none; /* become flex when toggled */
 				flex-direction: column;
-				gap: var(--size-2);
 				justify-self: center;
-				align-self: center;
 				text-align: center;
-				margin-block: var(--size-3);
+				margin-bottom: var(--size-3);
+				background-color: var(--surface-4);
+				gap: var(--size-2);
+				width: 100%;
+				z-index: 1;
 			}
 		}
 
 		.links.open {
 			display: flex;
+			position: absolute;
 		}
 
 		li.active {

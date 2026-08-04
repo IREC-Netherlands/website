@@ -1,7 +1,8 @@
 <script lang="ts">
-	import { formatDate } from '$lib/utils';
 	import '$lib/styles/pages.css';
 	import '$lib/styles/classic.css';
+
+	import { fade, fly } from 'svelte/transition';
 	let { data } = $props();
 	let index = $state(0);
 
@@ -36,16 +37,17 @@
 	</div>
 
 	<article>
-		<div class="content">
-			{#each data.abouts.slice(index, index + 1) as about}
+		{#key index}
+			{const about = data.abouts.at(index)!}
+			<div transition:fly class="content">
 				<h1>{about.title}</h1>
 				<about.content />
-			{/each}
-		</div>
+			</div>
+		{/key}
 	</article>
 </main>
 
-<style>
+<style lang="scss">
 	main {
 		display: flex;
 		gap: 10px;

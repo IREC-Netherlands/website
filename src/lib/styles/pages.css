@@ -25,6 +25,10 @@ main {
 		margin-top: var(--size-6);
 		margin-bottom: var(--size-3);
 	}
+
+	p {
+		margin-block: var(--size-2);
+	}
 }
 
 /* Article Styling */
