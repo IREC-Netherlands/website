@@ -92,8 +92,9 @@
 			}
 
 			& button:hover {
+				cursor: pointer;
 				background-color: var(--surface-1);
-				transition: ease-in 0.2s;
+				transition: ease-in 0.1s;
 			}
 		}
 

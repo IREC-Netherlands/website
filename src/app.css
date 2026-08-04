@@ -1,6 +1,4 @@
 @import 'tailwindcss';
-@plugin 'flowbite/plugin';
-@custom-variant dark (&:where(.dark, .dark *));
 
 html {
 	/* font */
@@ -24,16 +22,16 @@ html {
 
 	/* dark */
 	--brand-dark: rgb(103, 0, 1);
-	--text-1-dark: var(--color-white);
-	--text-2-dark: var(--color-gray-300);
-	--text-3-dark: var(--color-gray-700);
-	--text-4-dark: var(--color-black);
-	--surface-1-dark: rgb(36, 10, 0);
-	--surface-2-dark: rgb(85, 7, 1);
-	--surface-3-dark: rgb(255, 255, 255);
+	--text-1-dark: var(--color-black);
+	--text-2-dark: var(--color-gray-700);
+	--text-3-dark: var(--color-gray-300);
+	--text-4-dark: var(--color-white);
+	--surface-1-dark: rgb(244, 231, 229);
+	--surface-2-dark: rgb(187, 130, 119);
+	--surface-3-dark: rgb(0, 0, 0);
 	--surface-4-dark: rgb(103, 0, 1);
-	--background-dark: var(--gradient-8);
-	--border-dark: var(--gray-9);
+	--background-dark: white;
+	--border-dark: var(--gray-4);
 
 	/* light */
 	--brand-light: rgb(103, 0, 1);
@@ -45,12 +43,12 @@ html {
 	--surface-2-light: rgb(187, 130, 119);
 	--surface-3-light: rgb(0, 0, 0);
 	--surface-4-light: rgb(103, 0, 1);
-	--background-light: none;
+	--background-light: white;
 	--border-light: var(--gray-4);
 }
 
 :root {
-	color-scheme: dark;
+	color-scheme: light;
 
 	--brand: var(--brand-dark);
 	--text-1: var(--text-1-dark);
@@ -114,8 +112,6 @@ html {
 	--background: var(--background-light);
 	--border: var(--border-light);
 }
-
-@source '../node_modules/flowbite-svelte/dist';
 
 /* Default font and text configurations */
 html {

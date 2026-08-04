@@ -32,19 +32,22 @@
 			isOpen = false;
 		}}
 	>
-		<img class="img-logo" src="/assets/logo/grii-logo.png" alt="GRII Belanda" />
+		<img src="/assets/logo/grii-logo.png" alt="GRII Belanda" />
 	</a>
+
+	<button
+		class={isOpen ? 'open' : ''}
+		onclick={() => {
+			isOpen = !isOpen;
+		}}
+		>{#if isOpen}
+			<X />
+		{:else}
+			<Menu />
+		{/if}
+	</button>
+
 	<div class="link-section">
-		<button
-			onclick={() => {
-				isOpen = !isOpen;
-			}}
-			>{#if isOpen}
-				<X />
-			{:else}
-				<Menu />
-			{/if}
-		</button>
 		{#key isOpen}
 			<ul transition:fly={{ y: -100 }} class="links {isOpen ? 'open' : ''}">
 				{#each navigator as nav}
@@ -66,114 +69,107 @@
 
 <style>
 	nav {
-		padding-top: var(--size-1);
+		display: flex;
 		position: relative;
-
-		.link-section {
-			display: block;
-			width: 100%;
-			align-self: center;
-			justify-items: center;
-			padding: 0;
-			margin: 0;
-			@media (width > 1280px) {
-				justify-items: right;
-			}
-		}
-
-		ul {
-			padding: 0;
-			list-style-type: none;
-		}
-
-		@media (width > 1280px) {
-			display: flex;
-			justify-content: space-between;
-			padding-inline: var(--size-12);
-			ul {
-				align-items: center;
-				justify-items: center;
-			}
-		}
+		padding-inline: var(--size-12);
+		padding-block: var(--size-3);
 
 		@media (width < 1280px) {
 			display: grid;
-			grid-template-rows: auto auto auto;
 			justify-items: center;
-			row-gap: var(--size-7);
+			padding-inline: var(--size-0);
 		}
 
 		@media (width < 768px) {
-			row-gap: var(--size-0);
-		}
-
-		button {
-			display: none;
-			margin-block: var(--size-1);
-			padding-bottom: var(--size-1);
-
-			@media (width < 768px) {
-				display: block;
-				justify-self: center;
-			}
-		}
-
-		.links {
-			display: flex;
-			gap: var(--size-7);
-			align-items: center;
-
-			a {
-				color: inherit;
-				text-decoration: none;
-				white-space: nowrap;
-				font-size: var(--font-size-1);
-				font-weight: var(--font-weight-5);
-				width: fit-content;
-			}
-
-			/* Mobile view */
-			@media (width < 768px) {
-				display: none; /* become flex when toggled */
-				flex-direction: column;
-				justify-self: center;
-				text-align: center;
-				margin-bottom: var(--size-3);
-				background-color: rgba(0, 0, 0, 0.8);
-				gap: var(--size-2);
-				width: 100%;
-				z-index: 1;
-			}
-		}
-
-		.links.open {
-			display: flex;
-			position: absolute;
-		}
-
-		li {
-			border-bottom-width: 2.5px;
-			border-bottom-color: transparent;
-			border-bottom-style: inset;
-			padding: var(--size-1);
-		}
-
-		li.active {
-			font-weight: var(--font-weight-6);
-			border-bottom-color: rgb(255, 255, 255);
-		}
-
-		li:hover:not(.active) {
-			border-bottom-color: rgb(192, 192, 192);
-			transition: ease-in 0.2s;
+			padding-block: var(--size-0);
+			padding-top: var(--size-3);
 		}
 
 		.logo {
-			align-items: center;
 			margin-block: var(--size-3);
-			.img-logo {
+
+			img {
 				width: var(--size-13);
-				border-radius: 0;
+			}
+		}
+
+		button {
+			display: flex;
+			position: relative;
+			padding-block: var(--size-2);
+			justify-content: center;
+			width: 100%;
+
+			@media (width > 768px) {
+				display: none;
+			}
+		}
+
+		button.open {
+			background-color: rgba(0, 0, 0, 0.8);
+			transition: ease-in 0.25s ;
+		}
+
+		.link-section {
+			display: flex;
+			position: relative;
+			width: 100%;
+			margin: 0;
+			align-self: center;
+			justify-content: right;
+
+			@media (width < 1280px) {
+				justify-content: center;
+			}
+
+			ul {
+				display: flex;
+				list-style-type: none;
+				justify-content: right;
+				padding-inline: var(--size-3);
+				gap: var(--size-7);
+
+				@media (width < 1280px) {
+					justify-content: center;
+				}
+
+				@media (width < 768px) {
+					display: none;
+					background-color: rgba(0, 0, 0, 0.8);
+					gap: var(--size-2);
+					width: 100%;
+					z-index: 1;
+				}
+
+				a {
+					display: flex;
+					justify-content: center;
+				}
+
+				li {
+					border-bottom-width: 2.5px;
+					border-bottom-color: transparent;
+					border-bottom-style: inset;
+					font-weight: var(--font-weight-medium);
+					margin: var(--size-2);
+				}
+
+				li.active {
+					font-weight: var(--font-weight-bold);
+					border-bottom-color: rgb(255, 255, 255);
+				}
+
+				li:hover:not(.active) {
+					border-bottom-color: rgb(192, 192, 192);
+					transition: ease-in .05s;
+				}
+			}
+
+			ul.open {
+				@media (width < 768px) {
+					display: block;
+					position: absolute;
+				}
 			}
 		}
 	}
