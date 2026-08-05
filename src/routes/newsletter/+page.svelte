@@ -22,8 +22,8 @@
 
 <style>
 	iframe.bulletin {
-		max-width: 1180px;
-		aspect-ratio: 8/7;
+		max-width: 1115px;
+		min-height: 995px;
 		overflow: hidden;
 		border: none;
 	}
