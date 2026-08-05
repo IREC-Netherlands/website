@@ -2,11 +2,13 @@
 	import * as config from '$lib/config';
 </script>
 
-<footer>
+<footer class="surface-3">
 	<div class="footer-main">
-		<a href="/" class="logo">
-			<img class="img-logo" src="/assets/logo/grii-logo.png" alt="GRII Belanda" />
-		</a>
+		<div class="footer-logo">
+			<a href="/" class="logo">
+				<img class="img-logo" src="/assets/logo/grii-logo.png" alt="GRII Belanda" />
+			</a>
+		</div>
 		<div class="footer-content">
 			<div class="credits">
 				<p class="mb-2 font-bold">International Reformed Evangelical Church Netherlands</p>
@@ -14,6 +16,7 @@
 				<p>Obrechtstraat 50</p>
 				<p>2625 XN, Delft</p>
 			</div>
+
 			<div class="schedules">
 				<p class="mb-2 font-bold">Weekly Schedules</p>
 				<p class="font-medium">Sunday Service</p>
@@ -23,6 +26,7 @@
 				<p class="font-medium">Prayer Meeting</p>
 				<p class="mb-2">🕤 19:00 AMS Time (Wednesday)</p>
 			</div>
+
 			<div class="quicklinks">
 				<p class="font-bold">Partners Quicklinks</p>
 				<ol>
@@ -35,21 +39,18 @@
 						>
 					</li>
 					<li>
-						<a href="https://pusat.grii.org/" target="_blank" rel="noopener noreferrer"
-							>IREC Headquarter</a
-						>
-					</li>
-					<li>
-						<a href="https://stemi.org/" target="_blank" rel="noopener noreferrer">STEMI</a>
-					</li>
-					<li>
 						<a href="https://www.recjakarta.com/" target="_blank" rel="noopener noreferrer"
 							>REC Jakarta</a
 						>
 					</li>
 					<li>
-						<a href="https://www.reformed21.tv/" target="_blank" rel="noopener noreferrer"
-							>Reformed 21</a
+						<a href="https://pusat.grii.org/" target="_blank" rel="noopener noreferrer"
+							>REC Indonesia HQ</a
+						>
+					</li>
+					<li>
+						<a href="https://stemi.org/" target="_blank" rel="noopener noreferrer"
+							>Stephen Tong Evangelistic Ministry International (STEMI)</a
 						>
 					</li>
 					<li>
@@ -64,6 +65,11 @@
 							rel="noopener noreferrer">Aula Simfonia Jakarta</a
 						>
 					</li>
+					<li>
+						<a href="https://www.reformed21.tv/" target="_blank" rel="noopener noreferrer"
+							>Reformed 21</a
+						>
+					</li>
 				</ol>
 			</div>
 		</div>
@@ -73,55 +79,51 @@
 
 <style>
 	footer {
-		bottom: 0%;
-		width: 100%;
-		color: var(--color-1);
-		background-color: var(--surface-3);
-		border-top: 1px solid var(--border);
-
+		display: flex;
+		justify-content: center;
 		margin-top: var(--size-12);
 		padding-top: var(--size-11);
 		padding-bottom: var(--size-11);
 		padding-inline: var(--size-13);
 
-		justify-items: start;
-		vertical-align: bottom;
 		@media (width < 768px) {
-			padding-inline: var(--size-5);
+			padding-inline: var(--size-8);
 		}
 
 		.footer-main {
-			max-inline-size: 1280px;
-		}
+			width: 100%;
+			max-inline-size: 1440px;
 
-		.footer-content {
-			@media (width > 1280px) {
-				align-items: flex-start;
-				justify-content: space-between;
-				justify-items: center;
+			.footer-content {
 				display: flex;
-				gap: var(--size-11);
-			}
+				flex-wrap: wrap;
+				align-items: stretch;
+				justify-content: space-between;
 
-			div {
-				width: var(--size-14);
-				margin-bottom: var(--size-8);
+				@media (width < 768px) {
+					display: grid;
+				}
+
+				div {
+					width: var(--size-14);
+					margin-bottom: var(--size-8);
+				}
 			}
 		}
 	}
 
 	.img-logo {
 		max-width: var(--size-13);
-		margin-block: var(--size-5);
+		margin-block: var(--size-3);
 	}
 
 	:is(ol) {
-		padding: 0;
+		padding-inline: var(--size-6);
+		list-style-type: circle;
 	}
 
 	:is(li) {
-		list-style-type: circle;
-		list-style-position: inside;
 		padding: 0;
+		margin: 0;
 	}
 </style>
