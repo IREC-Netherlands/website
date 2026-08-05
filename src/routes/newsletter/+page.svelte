@@ -22,10 +22,11 @@
 
 <style>
 	iframe.bulletin {
-		max-width: 1115px;
-		min-height: 995px;
+		max-width: 1070px;
+		min-height: 860px;
 		overflow: hidden;
 		border: none;
+		scrollbar-width:none;
 	}
 
 	.calendar {
