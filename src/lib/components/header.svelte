@@ -10,8 +10,8 @@
 			anchor: '/about'
 		},
 		{
-			title: 'Activities',
-			anchor: '/activities'
+			title: 'Newsletter',
+			anchor: '/newsletter'
 		},
 		{
 			title: 'Location',

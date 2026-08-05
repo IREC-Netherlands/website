@@ -5,7 +5,7 @@
 
 <main>
 	<div>
-		<h1>Activities Bulletins</h1>
+		<h1>Newsletter</h1>
 		<section class="projects">
 			<ProjectHighlight />
 			<ProjectHighlight />
@@ -22,7 +22,7 @@
 
 <style>
 	.calendar {
-		width: 100%;
+		width: 80%;
 		margin-top: var(--size-10);
 		justify-items: center;
 		border-width: 1px;
