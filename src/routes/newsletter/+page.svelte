@@ -1,28 +1,35 @@
 <script>
 	import '$lib/styles/pages.css';
 	import ProjectHighlight from '$lib/components/projectHighlight.svelte';
+	import { PUBLIC_GOOGLE_CALENDAR_URL, PUBLIC_GOOGLE_SPREADSHEET_URL } from '$env/static/public';
 </script>
 
 <main>
 	<div>
 		<h1>Newsletter</h1>
 		<section class="projects">
-			<ProjectHighlight />
-			<ProjectHighlight />
+			<!-- <ProjectHighlight /> -->
+			<!-- <ProjectHighlight /> -->
+		</section>
+		<section class="spreadsheet">
+			<iframe title="bulletin" class="bulletin" src={PUBLIC_GOOGLE_SPREADSHEET_URL}></iframe>
 		</section>
 		<section class="aspect-4/5 md:aspect-video calendar">
-			<iframe
-				title="calendar"
-				src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Europe%2FAmsterdam&showPrint=0&src=cmVmb3JtZWRiaWJsZXN0dWR5bmxAZ21haWwuY29t&src=ZTY0YmZmMzUzODEzZWYyNmZiN2YyMTQyOGY5NTZlMzlkOWYzMDEwY2E5ZmE1Y2ExMTA0YzgwOGM5YzMxOWJiY0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%233f51b5&color=%23f6bf26"
-				scrolling="no"
-			></iframe>
+			<iframe title="calendar" src={PUBLIC_GOOGLE_CALENDAR_URL} scrolling="no"></iframe>
 		</section>
 	</div>
 </main>
 
 <style>
+	iframe.bulletin {
+		max-width: 1180px;
+		aspect-ratio: 8/7;
+		overflow: hidden;
+		border: none;
+	}
+
 	.calendar {
-		width: 80%;
+		width: 100%;
 		margin-top: var(--size-10);
 		justify-items: center;
 		border-width: 1px;
