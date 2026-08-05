@@ -6,7 +6,7 @@
 	<div class="footer-main">
 		<div class="footer-logo">
 			<a href="/" class="logo">
-				<img class="img-logo" src="/assets/logo/grii-logo.png" alt="GRII Belanda" />
+				<img class="img-logo" src="/assets/logo/grii-logo-nl-flag.png" alt="GRII Belanda" />
 			</a>
 		</div>
 		<div class="footer-content">
