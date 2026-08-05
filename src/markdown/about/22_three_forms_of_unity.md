@@ -7,10 +7,10 @@ language: EN
 
 https://www.ccel.org/creeds/BelgicConfession.html
 
-## Heidelberg Catechisms
+## Heidelberg Catechism
 
 https://ccel.org/ccel/schaff/creeds3/creeds3.iv.vi.html
 
-## Canon of Dort
+## Canons of Dort
 
 https://ccel.org/ccel/schaff/creeds1.ix.iii.vi.html

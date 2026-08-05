@@ -1,5 +1,6 @@
 <script lang="ts">
 	import '$lib/styles/pages.css';
+	import { TrainFront, TramFront, TrainTrack, Church, Footprints, ArrowRight } from 'lucide-svelte';
 
 	const maps_url =
 		'https://www.google.com/maps/embed/v1/search?q=Vierhovenkerk%2C%20Obrechtstraat%2C%20Delft%2C%20Netherlands&key=AIzaSyDL6gW0lwVxvjiV7SZQ3qZ0cGOkiuYZLoU';
@@ -11,22 +12,44 @@
 		<div class="locations">
 			<div class="contact-info">
 				<p class="title">International Reformed Evangelical Church in the Netherlands</p>
-				<p>
-					<b> Vierhovenkerk </b>
-					<br />Obrechtstraat 50
-					<br />2625 XN, Delft
-				</p>
-				<br />
+				<p>Vierhovenkerk</p>
+				<p>Obrechtstraat 50</p>
+				<p>2625 XN, Delft</p>
 			</div>
-			<div class="maps-frame">
-				<iframe
-					title="location"
-					width="99.9%"
-					height="99.9%"
-					loading="lazy"
-					allowfullscreen
-					src={maps_url}
-				></iframe>
+			<div class="mb-7">
+				<h3>Routes</h3>
+				<p>
+					<TrainFront class="inline" /> <b>Train</b> to Delft
+					<ArrowRight class="inline" />
+					<TramFront class="inline" /> Tram Stop <b>Delft Station</b>
+				</p>
+				<p>
+					<TrainTrack class="inline" /> 6 min. <b>HTM Tram 1</b>
+					<ArrowRight class="inline" />
+					<TramFront class="inline" /> Tram Stop <b>Martinus Nijhofflaan</b>
+				</p>
+				<p>
+					<Footprints class="inline" /> 3 min. <b>walking</b> (226m)
+					<ArrowRight class="inline" />
+					<Church class="inline" /> <b>Vierhovenkerk</b>
+				</p>
+			</div>
+			<div class="widgets">
+				<a
+					href="https://9292.nl/en?to=delft/poi/kerk/vierhovenkerk"
+					data-9292="widget"
+					data-9292-text="Vierhovenkerk%2C%20Delft"
+					data-9292-ref="delft/poi/kerk/vierhovenkerk"
+					data-9292-width="320"
+					data-9292-height="580"
+				>
+					Plan my journey
+				</a>
+				<script src="https://9292.nl/static/js/widget.js"></script>
+				<div class="maps-iframe">
+					<iframe title="location" width="100%" height="100%" loading="lazy" src={maps_url}
+					></iframe>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -34,24 +57,31 @@
 
 <style>
 	.title {
-		font-weight: var(--font-weight-7);
+		font-weight: var(--font-weight-bold);
+		margin-block: var(--size-2);
 	}
 	.locations {
 		flex-direction: row;
 	}
 	.contact-info {
-		max-width: var(--size-15);
-	}
-	p {
-		margin-block: var(--size-2);
+		max-width: var(--size-14);
+
+		p {
+			margin-block: var(--size-1);
+		}
 	}
 
-	.maps-frame {
-		border-width: 1px;
-		border-color: rgba(63, 63, 63, 0.3);
-		aspect-ratio: var(--ratio-portrait);
-		@media (width >= 768px) {
-			aspect-ratio: var(--ratio-landscape);
+	.widgets {
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--size-3);
+	}
+
+	.maps-iframe {
+		flex-grow: 1;
+		aspect-ratio: var(--aspect-video);
+		@media (width < 768px) {
+			aspect-ratio: var(--ratio-portrait);
 		}
 	}
 </style>
