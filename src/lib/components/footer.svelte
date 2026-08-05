@@ -15,6 +15,18 @@
 				<p class="font-semibold">Vierhovenkerk</p>
 				<p>Obrechtstraat 50</p>
 				<p>2625 XN, Delft</p>
+				<br />
+				<div class="social-media">
+					<a href="https://instagram.com/irs.netherlands">
+						<img alt="instagram" src="/assets/social_media/instagram.svg" class="icons" />
+					</a>
+					<a href="https://www.youtube.com/channel/UCJGpw2y2fAQ97CMXRpdPGMw">
+						<img alt="youtube" src="/assets/social_media/youtube.svg" class="icons" />
+					</a>
+					<a href="mailto:contact@irec-netherlands.org">
+						<img alt="email" src="/assets/social_media/gmail.svg" class="icons" />
+					</a>
+				</div>
 			</div>
 
 			<div class="schedules">
@@ -110,6 +122,21 @@
 				}
 			}
 		}
+	}
+
+	.social-media {
+		display: flex;
+		gap: var(--size-5);
+	}
+
+	.icons {
+		height: var(--size-7);
+		aspect-ratio: 1;
+		filter: invert();
+	}
+
+	.icons:hover {
+		filter: invert(70%)
 	}
 
 	.img-logo {

@@ -11,7 +11,7 @@
 <main>
 	<h1>Upcoming Events</h1>
 	<section class="events">
-		{#each data.events.slice(0, 3) as event}
+		{#each data.events.slice(0, 4) as event}
 			<a href="/articles/{event.slug}">
 				<Cards title={event.title} description={event.description} />
 			</a>
