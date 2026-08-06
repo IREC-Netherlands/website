@@ -19,8 +19,6 @@
 <style>
 	.layout {
 		margin-inline: auto;
-		/* display: grid; */
-		/* grid-template-rows: auto 1fr 1fr auto; */
 		min-height: 80vh;
 	}
 
