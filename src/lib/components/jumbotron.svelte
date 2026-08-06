@@ -69,7 +69,4 @@
 		}
 	}
 
-	.jumbotron .footnote {
-		font-size: var(--text-xs);
-	}
 </style>
