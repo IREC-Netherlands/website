@@ -1,7 +1,7 @@
 ---
-title: Love Thy Father in Heaven; Honor Your Dad on Earth
-description: Rev. Heru Lim
-date: '2026-3-26'
+title: Reduction in Life: Why Modern Life is too small
+description: Rev. Dr.Billy Kristanto
+date: '2026-6-27'
 categories:
   - events
 published: true

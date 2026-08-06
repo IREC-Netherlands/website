@@ -5,6 +5,7 @@ export type Post = {
 	description: string;
 	categories: string[];
 	published: boolean;
+	imgPath?: string;
 };
 
 export type AboutContent = {
