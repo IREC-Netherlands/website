@@ -7,9 +7,6 @@ async function getPosts(category: string) {
 	const paths = import.meta.glob('$lib/assets/markdown/posts/*.md', { eager: true });
 	const imgPaths: Record<string, any> = import.meta.glob('$lib/assets/images/posts/*', {
 		eager: true,
-		query: {
-			enhanced: true
-		}
 	});
 
 	for (const path in paths) {

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import * as config from '$lib/config';
-	import grii_logo from '$lib/assets/logo/grii/logo-nl-flag.png?enhanced'
+	import grii_logo from '$lib/assets/logo/grii/logo-nl-flag.png'
 	import instagram from '$lib/assets/logo/social_media/instagram.svg'
 	import youtube from '$lib/assets/logo/social_media/youtube.svg'
 	import gmail from '$lib/assets/logo/social_media/gmail.svg'
@@ -10,7 +10,7 @@
 	<div class="footer-main">
 		<div class="footer-logo">
 			<a title='home' href="/" class="logo">
-				<enhanced:img class="img-logo" src={grii_logo} alt="GRII Belanda" />
+				<img class="img-logo" src={grii_logo} alt="GRII Belanda" />
 			</a>
 		</div>
 		<div class="footer-content">

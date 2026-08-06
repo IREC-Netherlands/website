@@ -2,7 +2,7 @@
 	import { activePage } from '$lib/state/activePage.svelte';
 	import { Menu, X } from 'lucide-svelte';
 	import { fly } from 'svelte/transition';
-	import logo from '$lib/assets/logo/grii/logo.png?enhanced';
+	import logo from '$lib/assets/logo/grii/logo.png';
 	let isOpen = $state(false);
 
 	const navigator = [
@@ -34,7 +34,7 @@
 			isOpen = false;
 		}}
 	>
-		<enhanced:img src={logo} alt="GRII Belanda" class='logo-img'/>
+		<img src={logo} alt="GRII Belanda" class='logo-img'/>
 	</a>
 
 	<button

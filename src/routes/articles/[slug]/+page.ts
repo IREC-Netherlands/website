@@ -7,9 +7,6 @@ export async function load({ params }) {
 			`$lib/assets/images/posts/*.{avif,AVIF,gif,GIF,heif,HEIF,jpeg,JPEG,jpg,JPG,png,PNG,tiff,TIFF,webp,WEBP}`,
 			{
 				eager: true,
-				query: {
-					enhanced: true
-				}
 			}
 		);
 

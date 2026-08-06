@@ -14,51 +14,23 @@
 <main>
 	<article>
 		<hgroup>
-			<h1 class="text-5xl">{data.meta.title}</h1>
+			<h1 class="text-5xl capitalize">{data.meta.title}</h1>
 			<p>Published at {formatDate(data.meta.date)}</p>
 		</hgroup>
 
-		<div class="tags">
+		<div class="tags flex gap-3 mt-9">
 			{#each data.meta.categories as category}
-				<span class="surface-4">&num;{category}</span>
+				<span class="surface-4 rounded-2xl px-3 py-2">&num;{category}</span>
 			{/each}
 		</div>
-		<div class="flex gap-6 max-sm:flex-wrap my-5">
-			<enhanced:img
-				alt={data.meta.title}
-				src={data.image}
-				class="hero-img min-w-sm w-sm max-h-screen"
-			/>
+		<div class="grid grid-cols-[1fr_2fr] my-5 gap-3 max-sm:grid-cols-1">
+			<div class="min-w-sm">
+				<img alt={data.meta.title} src={data.image} />
+			</div>
 
-			<div class="prose grow">
+			<div class="prose">
 				<data.content />
 			</div>
 		</div>
 	</article>
 </main>
-
-<style>
-	article {
-		margin-inline: auto;
-
-		h1 {
-			text-transform: capitalize;
-		}
-
-		h1 + p {
-			margin-top: var(--size-2);
-			color: var(--text-2);
-		}
-
-		.tags {
-			display: flex;
-			gap: var(--size-3);
-			margin-top: var(--size-7);
-
-			> * {
-				padding: var(--size-2) var(--size-3);
-				border-radius: var(--radius-round);
-			}
-		}
-	}
-</style>

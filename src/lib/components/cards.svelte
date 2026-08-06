@@ -10,16 +10,12 @@
 
 <div class="card">
 	{#if image}
-		<enhanced:img
-			alt={title}
-			src={image}
-			class="card-image shadow-sm hover:-translate-y-2 duration-300"
-		/>
+		<img alt={title} src={image} class="card-image shadow-sm hover:-translate-y-2 duration-300" />
 	{:else}
 		<img alt="default" src={default_icon} />
 	{/if}
-	<div class="card-body">
-		<p class="card-title">{title}</p>
+	<div class="p-5 h-50">
+		<p class="text-lg font-bold m-0">{title}</p>
 		<p class="card-description">{description}</p>
 	</div>
 </div>
@@ -44,18 +40,6 @@
 
 	.card:hover {
 		box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-	}
-
-	.card-body {
-		padding: 20px;
-		max-height: var(--size-12);
-	}
-
-	.card-title {
-		font-size: var(--text-lg);
-		line-height: var(--text-lg--line-height);
-		font-weight: 700;
-		margin: 0;
 	}
 
 	.card-description {
