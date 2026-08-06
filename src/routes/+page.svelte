@@ -13,7 +13,7 @@
 	<section class="events">
 		{#each data.events.slice(0, 4) as event}
 			<a href="/articles/{event.slug}">
-				<Cards title={event.title} description={event.description} />
+				<Cards title={event.title} description={event.description} image="/posts/{event.slug}.png"/>
 			</a>
 		{/each}
 	</section>
