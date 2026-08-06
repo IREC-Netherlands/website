@@ -4,6 +4,7 @@ main {
 	width: 100%;
 	padding-inline: var(--size-3);
 	padding-top: var(--size-3);
+	padding-bottom: var(--size-10);
 
 	@media (width >= 768px) {
 		padding-inline: var(--size-10);
@@ -35,17 +36,11 @@ main {
 .prose {
 	background-color: var(--surface-1);
 	border-radius: var(--radius-4xl);
-	border-color: rgba(63, 63, 63, 0.1);
-	border-width: 1px;
-	margin-block: var(--size-5);
 	padding-block: var(--size-5);
 	padding-inline: var(--size-4);
 
 	@media (width >= 1024px) {
-		margin-block: var(--size-5);
 		padding-inline: var(--size-8);
-		padding-block: var(--size-5);
-		padding-inline: var(--size-2);
 
 		p {
 			max-inline-size: none;
@@ -86,7 +81,7 @@ main {
 		:is(h2, h3, h4, h5, h6) {
 			max-inline-size: var(--size-header-5);
 			font-weight: 600;
-			margin-top: var(--size-8);
+			margin-top: var(--size-3);
 			margin-bottom: var(--size-3);
 		}
 

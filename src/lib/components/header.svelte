@@ -2,6 +2,7 @@
 	import { activePage } from '$lib/state/activePage.svelte';
 	import { Menu, X } from 'lucide-svelte';
 	import { fly } from 'svelte/transition';
+	import logo from '$lib/assets/logo/grii/logo.png?enhanced';
 	let isOpen = $state(false);
 
 	const navigator = [
@@ -26,13 +27,14 @@
 
 <nav class="surface-4">
 	<a
+		title="home"
 		href="/"
 		class="logo"
 		onclick={() => {
 			isOpen = false;
 		}}
 	>
-		<img src="/assets/logo/grii-logo.png" alt="GRII Belanda" />
+		<enhanced:img src={logo} alt="GRII Belanda" class='logo-img'/>
 	</a>
 
 	<button
@@ -88,7 +90,7 @@
 		.logo {
 			margin-block: var(--size-3);
 
-			img {
+			.logo-img {
 				width: var(--size-13);
 			}
 		}
@@ -107,7 +109,7 @@
 
 		button.open {
 			background-color: rgba(0, 0, 0, 0.8);
-			transition: ease-in 0.25s ;
+			transition: ease-in 0.25s;
 		}
 
 		.link-section {
@@ -161,7 +163,7 @@
 
 				li:hover:not(.active) {
 					border-bottom-color: rgb(192, 192, 192);
-					transition: ease-in .05s;
+					transition: ease-in 0.05s;
 				}
 			}
 

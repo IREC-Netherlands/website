@@ -1,5 +1,5 @@
 <script>
-	const title = 'IREC Netherlands (PRII)';
+	const title = 'IREC Netherlands';
 	const subtitle = 'International Reformed Evangelical Church in the Netherlands';
 	const description =
 		'We are a Bible-believing, Reformed church that aims to share the Gospel to the people in the Netherlands. Join us every Sunday for worship.';
@@ -15,10 +15,6 @@
 		</p>
 		<p>{description}</p>
 		<br />
-		<p class="footnote">
-			<sup>*1</sup> PRII is the first out of three church growth stages in the Synod of IREC
-		</p>
-
 		<a href={buttonLink}>
 			<button>{buttonText}</button>
 		</a>
@@ -42,7 +38,8 @@
 	}
 
 	.jumbotron .title {
-		font-size: 2rem;
+		font-size: var(--text-5xl);
+		line-height: var(--text-5xl--line-height);
 		font-weight: var(--font-weight-7);
 	}
 

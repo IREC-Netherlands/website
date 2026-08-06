@@ -1,12 +1,16 @@
 <script lang="ts">
 	import * as config from '$lib/config';
+	import grii_logo from '$lib/assets/logo/grii/logo-nl-flag.png?enhanced'
+	import instagram from '$lib/assets/logo/social_media/instagram.svg'
+	import youtube from '$lib/assets/logo/social_media/youtube.svg'
+	import gmail from '$lib/assets/logo/social_media/gmail.svg'
 </script>
 
 <footer class="surface-3">
 	<div class="footer-main">
 		<div class="footer-logo">
-			<a href="/" class="logo">
-				<img class="img-logo" src="/assets/logo/grii-logo-nl-flag.png" alt="GRII Belanda" />
+			<a title='home' href="/" class="logo">
+				<enhanced:img class="img-logo" src={grii_logo} alt="GRII Belanda" />
 			</a>
 		</div>
 		<div class="footer-content">
@@ -18,13 +22,13 @@
 				<br />
 				<div class="social-media">
 					<a href="https://instagram.com/irs.netherlands">
-						<img alt="instagram" src="/assets/social_media/instagram.svg" class="icons" />
+						<img alt="instagram" src={instagram} class="icons" />
 					</a>
 					<a href="https://www.youtube.com/channel/UCJGpw2y2fAQ97CMXRpdPGMw">
-						<img alt="youtube" src="/assets/social_media/youtube.svg" class="icons" />
+						<img alt="youtube" src={youtube} class="icons" />
 					</a>
 					<a href="mailto:contact@irec-netherlands.org">
-						<img alt="email" src="/assets/social_media/gmail.svg" class="icons" />
+						<img alt="email" src={gmail} class="icons" />
 					</a>
 				</div>
 			</div>
@@ -93,7 +97,6 @@
 	footer {
 		display: flex;
 		justify-content: center;
-		margin-top: var(--size-12);
 		padding-top: var(--size-11);
 		padding-bottom: var(--size-11);
 		padding-inline: var(--size-13);

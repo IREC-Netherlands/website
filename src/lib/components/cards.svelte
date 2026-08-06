@@ -1,17 +1,23 @@
 <script>
+	import default_icon from '$lib/assets/logo/grii/icon.png';
+
 	let {
 		title = 'Card Title',
 		description = 'This is a description of the card.',
-		image = ''
+		image
 	} = $props();
 </script>
 
 <div class="card">
-	<img
-		class="card-image shadow-sm hover:-translate-y-2 duration-300"
-		src={image ? image : '/assets/logo/grii-icon.png'}
-		alt={title}
-	/>
+	{#if image}
+		<enhanced:img
+			alt={title}
+			src={image}
+			class="card-image shadow-sm hover:-translate-y-2 duration-300"
+		/>
+	{:else}
+		<img alt="default" src={default_icon} />
+	{/if}
 	<div class="card-body">
 		<p class="card-title">{title}</p>
 		<p class="card-description">{description}</p>

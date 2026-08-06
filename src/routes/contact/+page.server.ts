@@ -23,7 +23,6 @@ export const actions = {
 		const email = data.get('email') as string;
 		const subject = data.get('subject') as string;
 		const message = data.get('message') as string;
-		const company = data.get('company') as string;
 
 		// purposely verbose error checking
 		if (!name) {

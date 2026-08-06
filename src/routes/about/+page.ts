@@ -7,7 +7,7 @@ export async function load({ fetch }) {
 		const abouts: AboutContent[] = await response.json();
 
 		for (const about of abouts){
-			const content = await import(`../../markdown/about/${about.slug}.md`)
+			const content = await import(`$lib/assets/markdown/about/${about.slug}.md`)
 			about.content = content.default
 		}
 		return { abouts };

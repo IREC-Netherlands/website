@@ -23,9 +23,16 @@
 				<span class="surface-4">&num;{category}</span>
 			{/each}
 		</div>
+		<div class="flex gap-6 max-sm:flex-wrap my-5">
+			<enhanced:img
+				alt={data.meta.title}
+				src={data.image}
+				class="hero-img min-w-sm w-sm max-h-screen"
+			/>
 
-		<div class="prose">
-			<data.content />
+			<div class="prose grow">
+				<data.content />
+			</div>
 		</div>
 	</article>
 </main>

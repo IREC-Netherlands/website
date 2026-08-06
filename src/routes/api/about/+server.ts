@@ -4,7 +4,7 @@ import type { AboutContent } from '$lib/types';
 async function getContent() {
 	let abouts: AboutContent[] = [];
 
-	const paths = import.meta.glob('../../../markdown/about/*.md', { eager: true });
+	const paths = import.meta.glob('$lib/assets/markdown/about/*.md', { eager: true });
 
 	for (const path in paths) {
 
