@@ -125,6 +125,8 @@ html {
 	background-image: var(--background);
 	background-attachment: fixed;
 	overflow-y: scroll;
+	scroll-behavior: smooth;
+	container-type: scroll-state;
 }
 
 ol {
