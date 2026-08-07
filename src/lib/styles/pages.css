@@ -1,13 +1,14 @@
 main {
-	padding-inline: var(--size-12);
-	padding-top: var(--size-7);
-	max-inline-size: 1440px;
 	justify-self: center;
 	height: 100%;
 	width: 100%;
+	padding-inline: var(--size-3);
+	padding-top: var(--size-3);
+	padding-bottom: var(--size-10);
 
-	@media (max-width: 768px) {
-		padding-inline: var(--size-5);
+	@media (width >= 768px) {
+		padding-inline: var(--size-10);
+		max-inline-size: 1440px;
 	}
 
 	/* Font spacing and styling */
@@ -25,19 +26,20 @@ main {
 		margin-top: var(--size-6);
 		margin-bottom: var(--size-3);
 	}
+
+	p {
+		margin-block: var(--size-2);
+	}
 }
 
 /* Article Styling */
 .prose {
-  background-color: var(--surface-1);
-  border-radius: var(--radius-xs);
-  border-color: rgba(63, 63, 63, 0.3);
-  border-width: 1px;
-  margin-block: var(--size-5);
-  padding-block: var(--size-5);
-  padding-inline: var(--size-2);
+	background-color: var(--surface-1);
+	border-radius: var(--radius-4xl);
+	padding-block: var(--size-5);
+	padding-inline: var(--size-4);
 
-	@media (width >= 48rem) {
+	@media (width >= 1024px) {
 		padding-inline: var(--size-8);
 
 		p {
@@ -79,7 +81,7 @@ main {
 		:is(h2, h3, h4, h5, h6) {
 			max-inline-size: var(--size-header-5);
 			font-weight: 600;
-			margin-top: var(--size-8);
+			margin-top: var(--size-3);
 			margin-bottom: var(--size-3);
 		}
 
@@ -99,6 +101,7 @@ main {
 		:is(ul, ol) li {
 			margin-block: var(--size-0);
 			padding-inline-start: var(--size-2);
+			list-style-position: outside;
 			max-inline-size: none;
 
 			:is(ul, ol) {

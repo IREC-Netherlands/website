@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { page } from '$app/state';
 	import Cards from '$lib/components/cards.svelte';
 	import Jumbotron from '$lib/components/jumbotron.svelte';
 	import '$lib/styles/pages.css';
@@ -8,38 +7,35 @@
 
 <Jumbotron />
 
-<main>
-	<h1>Upcoming Events</h1>
-	<section class="events">
-		{#each data.events.slice(0, 3) as event}
-			<a href="/articles/{event.slug}">
-				<Cards title={event.title} description={event.description} />
-			</a>
-		{/each}
-	</section>
+<div class="w-full flex justify-center text-5xl text-center font-semibold pt-24">Latest Events & Summary</div>
 
-	<!-- <h1>Acticles</h1>
-	<section class="notices">
-		{#each data.notices.slice(0, 3) as notice}
-			<a href="/articles/{notice.slug}">
-				<Cards title={notice.title} description={notice.description} />
-			</a>
-		{/each}
-	</section> -->
-</main>
+<section>
+	{#each data.events.slice(0, 3) as event}
+		<a href="/articles/{event.slug}">
+			<Cards title={event.title} description={event.description} image={event.image.default} --aspect-ratio="4/5"/>
+		</a>
+	{/each}
+</section>
+
+<div class="w-full flex justify-center text-5xl text-center text-white font-semibold pt-20 bg-[#2d4685]">
+	Community
+</div>
+
+<section class="bg-[#2d4685]">
+	{#each data.communities as community}
+		<a href="/articles/{community.slug}">
+			<Cards title={community.title} description={community.description} image={community.image.default} --aspect-ratio="16/10"/>
+		</a>
+	{/each}
+</section>
 
 <style>
-	h1 {
-		font-size: var(--text-6xl);
-		line-height: var(--text-6xl--line-height);
-		margin-top: var(--size-9);
-		justify-self: center;
-	}
-	.notices,
-	.events {
+	section {
 		display: flex;
-		justify-content: center;
-		gap: var(--size-7);
 		flex-wrap: wrap;
+		gap: var(--size-7);
+		justify-content: center;
+		padding-block: var(--size-10);
+		padding-inline: var(--size-5);
 	}
 </style>

@@ -1,12 +1,9 @@
 <script lang="ts">
 	import { activePage } from '$lib/state/activePage.svelte';
-	import * as config from '$lib/config';
-	import { Menu } from 'lucide-svelte';
-
+	import { Menu, X } from 'lucide-svelte';
+	import { fly } from 'svelte/transition';
+	import logo from '$lib/assets/logo/grii/logo.png';
 	let isOpen = $state(false);
-	function toggleMenu() {
-		isOpen = !isOpen;
-	}
 
 	const navigator = [
 		{
@@ -14,11 +11,11 @@
 			anchor: '/about'
 		},
 		{
-			title: 'Activities',
-			anchor: '/activities'
+			title: 'Newsletter',
+			anchor: '/newsletter'
 		},
 		{
-			title: 'Locations',
+			title: 'Location',
 			anchor: '/location'
 		},
 		{
@@ -29,117 +26,152 @@
 </script>
 
 <nav class="surface-4">
-	<a href="/" class="logo">
-		<img class="img-logo" src="/assets/logo/grii-logo.png" alt="GRII Belanda" />
+	<a
+		title="home"
+		href="/"
+		class="logo"
+		onclick={() => {
+			isOpen = false;
+		}}
+	>
+		<img src={logo} alt="GRII Belanda" class='logo-img'/>
 	</a>
 
-	<button class="hamburger" onclick={toggleMenu}><Menu /></button>
+	<button
+		class={isOpen ? 'open' : ''}
+		onclick={() => {
+			isOpen = !isOpen;
+		}}
+		>{#if isOpen}
+			<X />
+		{:else}
+			<Menu />
+		{/if}
+	</button>
 
-	<ul class="links {isOpen ? 'open' : ''}">
-		{#each navigator as nav}
-			<a href={nav.anchor} onclick={toggleMenu}>
-				<li class={nav.title === activePage.page ? 'active' : ''}>
-					{nav.title}
-				</li>
-			</a>
-		{/each}
-	</ul>
+	<div class="link-section">
+		{#key isOpen}
+			<ul transition:fly={{ y: -100 }} class="links {isOpen ? 'open' : ''}">
+				{#each navigator as nav}
+					<a
+						href={nav.anchor}
+						onclick={() => {
+							isOpen = false;
+						}}
+					>
+						<li class={nav.title === activePage.page ? 'active' : ''}>
+							{nav.title}
+						</li>
+					</a>
+				{/each}
+			</ul>
+		{/key}
+	</div>
 </nav>
 
 <style>
 	nav {
-		padding-top: var(--size-1);
-		padding-bottom: var(--size-1);
+		display: flex;
+		position: relative;
 		padding-inline: var(--size-12);
+		padding-block: var(--size-3);
 
-		ul {
-			list-style-type: none;
-		}
-
-		@media (min-width: 1440px) {
-			display: flex;
-			justify-content: space-between;
-
-			ul {
-				align-items: center;
-				justify-items: center;
-			}
-		}
-
-		@media (max-width: 1440px) {
+		@media (width < 1280px) {
 			display: grid;
-			grid-template-rows: auto auto auto;
 			justify-items: center;
-			row-gap: var(--size-7);
-			padding-inline: var(--size-9);
+			padding-inline: var(--size-0);
 		}
 
-		@media (max-width: 768px) {
-			row-gap: var(--size-0);
-		}
-
-		.hamburger {
-			display: none;
-			background-color: transparent;
-			margin-block: var(--size-1);
-			@media (max-width: 768px) {
-				display: block;
-				justify-self: center;
-			}
-		}
-
-		.links {
-			display: flex;
-			margin-block: var(--size-7);
-			margin-block: 0;
-			gap: var(--size-7);
-
-			a {
-				color: inherit;
-				text-decoration: none;
-				white-space: nowrap;
-				font-size: var(--font-size-1);
-				font-weight: var(--font-weight-5);
-			}
-
-			li {
-				border-bottom-width: 2.5px;
-				border-bottom-color: transparent;
-				border-bottom-style: inset;
-			}
-
-			li:hover:not(.active) {
-				border-bottom-color: rgb(192, 192, 192);
-				transition: ease-in 0.2s;
-			}
-
-			/* Mobile view */
-			@media (max-width: 768px) {
-				display: none; /* become flex when toggled */
-				flex-direction: column;
-				gap: var(--size-2);
-				justify-self: center;
-				align-self: center;
-				text-align: center;
-				margin-block: var(--size-3);
-			}
-		}
-
-		.links.open {
-			display: flex;
-		}
-
-		li.active {
-			font-weight: var(--font-weight-6);
-			border-bottom-color: rgb(255, 255, 255);
+		@media (width < 768px) {
+			padding-block: var(--size-0);
+			padding-top: var(--size-3);
 		}
 
 		.logo {
-			align-items: center;
 			margin-block: var(--size-3);
-			.img-logo {
+
+			.logo-img {
 				width: var(--size-13);
-				border-radius: 0;
+			}
+		}
+
+		button {
+			display: flex;
+			position: relative;
+			padding-block: var(--size-2);
+			justify-content: center;
+			width: 100%;
+
+			@media (width > 768px) {
+				display: none;
+			}
+		}
+
+		button.open {
+			background-color: rgba(0, 0, 0, 0.8);
+			transition: ease-in 0.25s;
+		}
+
+		.link-section {
+			display: flex;
+			position: relative;
+			width: 100%;
+			margin: 0;
+			align-self: center;
+			justify-content: right;
+
+			@media (width < 1280px) {
+				justify-content: center;
+			}
+
+			ul {
+				display: flex;
+				list-style-type: none;
+				justify-content: right;
+				padding-inline: var(--size-3);
+				gap: var(--size-7);
+
+				@media (width < 1280px) {
+					justify-content: center;
+				}
+
+				@media (width < 768px) {
+					display: none;
+					background-color: rgba(0, 0, 0, 0.8);
+					gap: var(--size-2);
+					width: 100%;
+					z-index: 1;
+				}
+
+				a {
+					display: flex;
+					justify-content: center;
+				}
+
+				li {
+					border-bottom-width: 2.5px;
+					border-bottom-color: transparent;
+					border-bottom-style: inset;
+					font-weight: var(--font-weight-medium);
+					margin: var(--size-2);
+				}
+
+				li.active {
+					font-weight: var(--font-weight-bold);
+					border-bottom-color: rgb(255, 255, 255);
+				}
+
+				li:hover:not(.active) {
+					border-bottom-color: rgb(192, 192, 192);
+					transition: ease-in 0.05s;
+				}
+			}
+
+			ul.open {
+				@media (width < 768px) {
+					display: block;
+					position: absolute;
+				}
 			}
 		}
 	}

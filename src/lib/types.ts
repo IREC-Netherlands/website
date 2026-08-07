@@ -1,31 +1,26 @@
 export type Post = {
-	title: string
-	slug: string
-	description: string
-	date: string
-	categories: string[]
-	published: boolean
-}
+	title: string;
+	slug: string;
+	date: string;
+	description: string;
+	categories: string[];
+	published: boolean;
+	image?: any;
+};
 
-export type Member = {
-	slug: string
-	name: string
-	job: string
-	research: string
-    phd: string
-	master: string
-	bachelor: string
-    phdcandidate : true
-    email: string
-    phone: string
-}
+export type AboutContent = {
+	title: string;
+	slug: string;
+	language: string;
+	content: any;
+};
 
 export type Crumb<M = any> = {
-    title?: string;
-    url?: string;
-    metadata?: M;
-  };
-  export type ModuleData = {
-    pageTitle?: string;
-    getPageTitle?: (data: any) => string;
-  };
+	title?: string;
+	url?: string;
+	metadata?: M;
+};
+export type ModuleData = {
+	pageTitle?: string;
+	getPageTitle?: (data: any) => string;
+};

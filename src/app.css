@@ -5,6 +5,13 @@ html {
 	--font-system-ui: 'Montserrat', sans-serif;
 	--font-monospace-code: 'JetBrains Mono', monospace;
 
+	/* Screen sizes */
+	--screen-sm: 40rem; /*640px*/
+	--screen-md: 48rem; /*768px*/
+	--screen-lg: 64rem; /*1024px*/
+	--screen-xl: 80rem; /*1280px*/
+	--screen-2xl: 96rem; /*1536px*/
+
 	/* ratios */
 	--ratio-square: 1;
 	--ratio-landscape: 5/4;
@@ -15,16 +22,16 @@ html {
 
 	/* dark */
 	--brand-dark: rgb(103, 0, 1);
-	--text-1-dark: var(--color-white);
-	--text-2-dark: var(--color-gray-300);
-	--text-3-dark: var(--color-gray-700);
-	--text-4-dark: var(--color-black);
-	--surface-1-dark: rgb(36, 10, 0);
-	--surface-2-dark: rgb(85, 7, 1);
-	--surface-3-dark: rgb(255, 255, 255);
+	--text-1-dark: var(--color-black);
+	--text-2-dark: var(--color-gray-700);
+	--text-3-dark: var(--color-gray-300);
+	--text-4-dark: var(--color-white);
+	--surface-1-dark: rgb(244, 231, 229);
+	--surface-2-dark: rgb(187, 130, 119);
+	--surface-3-dark: rgb(0, 0, 0);
 	--surface-4-dark: rgb(103, 0, 1);
-	--background-dark: var(--gradient-8);
-	--border-dark: var(--gray-9);
+	--background-dark: white;
+	--border-dark: var(--gray-4);
 
 	/* light */
 	--brand-light: rgb(103, 0, 1);
@@ -36,12 +43,12 @@ html {
 	--surface-2-light: rgb(187, 130, 119);
 	--surface-3-light: rgb(0, 0, 0);
 	--surface-4-light: rgb(103, 0, 1);
-	--background-light: none;
+	--background-light: white;
 	--border-light: var(--gray-4);
 }
 
 :root {
-	color-scheme: dark;
+	color-scheme: light;
 
 	--brand: var(--brand-dark);
 	--text-1: var(--text-1-dark);
@@ -106,17 +113,6 @@ html {
 	--border: var(--border-light);
 }
 
-/* grid background style */
-html,
-body {
-	min-height: 100%;
-	background:
-		linear-gradient(to right, #cccccc70 1px, transparent 1px),
-		linear-gradient(to bottom, #cccccc70 1px, transparent 1px);
-	background-size: 30px 30px; /* Adjust the grid cell size */
-	background-position: 0 0;
-}
-
 /* Default font and text configurations */
 html {
 	color: var(--text-1);
@@ -129,17 +125,23 @@ html {
 	background-image: var(--background);
 	background-attachment: fixed;
 	overflow-y: scroll;
+	scroll-behavior: smooth;
+	container-type: scroll-state;
 }
 
-ul,
 ol {
+	list-style: decimal;
+	padding-left: var(--size-8);
+}
+
+ul {
 	list-style: circle;
-	list-style-position: inside;
-	padding: 4px;
+	padding-left: var(--size-8);
 }
 
 li {
-	padding-inline-start: 4px;
+	margin-block: var(--size-0);
+	max-inline-size: none;
 }
 
 a,

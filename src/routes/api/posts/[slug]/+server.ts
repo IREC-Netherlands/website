@@ -1,21 +1,28 @@
 import { json } from '@sveltejs/kit';
 import type { Post } from '$lib/types';
-import type { Cat } from 'lucide-svelte';
 
 async function getPosts(category: string) {
 	let posts: Post[] = [];
 
-	const paths = import.meta.glob('../../../../data/markdown/posts/*.md', { eager: true });
+	const paths = import.meta.glob('$lib/assets/posts/**/*.md', { eager: true });
+	const imgPaths: Record<string, any> = import.meta.glob(
+		'$lib/assets/posts/**/*.{avif,AVIF,gif,GIF,heif,HEIF,jpeg,JPEG,jpg,JPG,png,PNG,tiff,TIFF,webp,WEBP}',
+		{ eager: true }
+	);
 
 	for (const path in paths) {
+		const [_, directory, slug, ...rest] = /(.+\/(.+))\/[^\/]+$/.exec(path)!;
+		const [filteredKeys, ...r] = Object.keys(imgPaths).filter(
+			(key) => key.includes(directory) && key.includes('/index.')
+		);
 		const file = paths[path];
-		const slug = path.split('/').at(-1)?.replace('.md', '');
 
 		if (file && typeof file === 'object' && 'metadata' in file && slug) {
 			const metadata = file.metadata as Omit<Post, 'slug'>;
-			const post = { ...metadata, slug } satisfies Post;
-			if (category) {
-				post.categories.includes(category) && post.published && posts.push(post);
+			if (category && metadata.categories.includes(category) && metadata.published) {
+				let image: any = imgPaths[filteredKeys];
+				const post = { ...metadata, slug, image } satisfies Post;
+				posts.push(post);
 			}
 		}
 	}

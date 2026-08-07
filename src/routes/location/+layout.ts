@@ -1,5 +1,5 @@
 import { activePage } from "$lib/state/activePage.svelte";
 
 export function load() {
-    activePage.page = 'Locations';
+    activePage.page = 'Location';
 }
