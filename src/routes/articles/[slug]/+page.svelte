@@ -1,8 +1,12 @@
 <script lang="ts">
 	import { formatDate } from '$lib/utils';
+	import { Splide, SplideSlide } from '@splidejs/svelte-splide';
+	import '@splidejs/svelte-splide/css';
 	import '$lib/styles/pages.css';
 	import '$lib/styles/classic.css';
 	let { data } = $props();
+
+	let counter = $state(0);
 </script>
 
 <svelte:head>
@@ -24,13 +28,27 @@
 			{/each}
 		</div>
 		<div class="grid grid-cols-[1fr_2fr] my-5 gap-3 max-sm:grid-cols-1">
-			<div class="min-w-sm">
-				<img alt={data.meta.title} src={data.image} />
+			<div class=" min-w-sm">
+				<div class="max-sm:hidden">
+					{#each data.images as image}
+						<img alt={data.meta.title} src={image.default} class="mb-5" />
+					{/each}
+				</div>
+				<div class="sm:hidden">
+					<Splide>
+						{#each data.images as image}
+							<SplideSlide>
+								<img alt={data.meta.title} src={image.default} />
+							</SplideSlide>
+						{/each}
+					</Splide>
+				</div>
 			</div>
-
 			<div class="prose">
 				<data.content />
 			</div>
 		</div>
 	</article>
 </main>
+
+

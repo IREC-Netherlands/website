@@ -22,11 +22,11 @@
 
 <style>
 	.card {
-		border: 1px solid #ddd;
 		overflow: hidden;
 		background-color: var(--surface-1);
 		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 		transition: box-shadow 0.3s ease;
+		border-radius: var(--radius-lg);
 
 		.card-image {
 			border-radius: var(--radius-lg);

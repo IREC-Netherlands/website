@@ -4,24 +4,20 @@ import type { Post } from '$lib/types';
 async function getPosts(category: string) {
 	let posts: Post[] = [];
 
-	const paths = import.meta.glob('$lib/assets/markdown/posts/*.md', { eager: true });
-	const imgPaths: Record<string, any> = import.meta.glob('$lib/assets/images/posts/*', {
-		eager: true,
-	});
+	const paths = import.meta.glob('$lib/assets/posts/**/*.md', { eager: true });
+	const imgPaths: Record<string, any> = import.meta.glob(
+		'$lib/assets/posts/**/*.{avif,AVIF,gif,GIF,heif,HEIF,jpeg,JPEG,jpg,JPG,png,PNG,tiff,TIFF,webp,WEBP}',
+		{ eager: true }
+	);
 
 	for (const path in paths) {
+		const [_, directory, slug, ...rest] = /(.+\/(.+))\/[^\/]+$/.exec(path)!;
+		const filteredKeys = Object.keys(imgPaths).filter((key) => key.includes(directory) && key.includes('/index.'));
 		const file = paths[path];
-		const slug = path.split('/').at(-1)?.replace('.md', '');
 		if (file && typeof file === 'object' && 'metadata' in file && slug) {
 			const metadata = file.metadata as Omit<Post, 'slug'>;
 			if (category && metadata.categories.includes(category) && metadata.published) {
-				let image: any = undefined;
-				for (const _imgPath in imgPaths) {
-					if (_imgPath.includes(slug)) {
-						image = imgPaths[_imgPath].default;
-					}
-				}
-
+				let image: any = imgPaths[filteredKeys[0]] ? filteredKeys: undefined;
 				const post = { ...metadata, slug, image } satisfies Post;
 				posts.push(post);
 			}
