@@ -29,9 +29,12 @@
 		</div>
 		<div class="grid grid-cols-[1fr_2fr] my-5 gap-3 max-sm:grid-cols-1">
 			<div class=" min-w-sm">
-				<div class="max-sm:hidden flex flex-wrap gap-2">
-					{#each data.images as image}
-						<img alt={data.meta.title} src={image.default} />
+				<div class="max-sm:hidden grid gap-2">
+					{#each data.images as image, index}
+						<details class="details" name={data.meta.title} open={index > 0 ? false : true}>
+							<summary>{index > 0 ? data.images_summary[index] : data.meta.title}</summary>
+							<img alt={data.meta.title} src={image.default} />
+						</details>
 					{/each}
 				</div>
 				<div class="sm:hidden">
@@ -51,4 +54,36 @@
 	</article>
 </main>
 
+<style>
+	details {
+		position: relative;
+		overflow: hidden;
+		border-radius: var(--radius-2xl);
+		background-color: var(--surface-1);
+	}
 
+	summary {
+		cursor: pointer;
+		list-style-position: outside;
+		padding: 0.5rem .125rem .5rem .5rem;
+		margin-inline-start: 1.75rem;
+	}
+
+	summary::marker {
+		font-size: 0.75em;
+	}
+
+	.details::details-content {
+		display: block;
+		block-size: 0;
+		transition:
+			block-size 0.5s,
+			content-visibility 0.5s;
+		transition-behavior: allow-discrete;
+	}
+
+	.details[open]::details-content {
+		block-size: auto;
+		block-size: calc-size(auto);
+	}
+</style>

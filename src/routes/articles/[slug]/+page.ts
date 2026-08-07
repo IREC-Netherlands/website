@@ -15,14 +15,18 @@ export async function load({ params }: any) {
 			.sort((a: string, b: string) => Number(a.includes('/index.')) * -100 + (a > b ? 1 : -1));
 
 		const images: any[] = [];
+		const images_summary: string[] = [];
 		for (const key of filteredKeys) {
+			const [_, dir, name, ...r] = /(.+\/.+)\/([^\/]+)\..+$/.exec(key)!;
 			images.push(imgPaths[key]);
+			images_summary.push(name);
 		}
 
 		return {
 			content: post.default,
 			meta: post.metadata,
-			images: images
+			images,
+			images_summary
 		};
 	} catch (e) {
 		console.log(e);
