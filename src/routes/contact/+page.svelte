@@ -27,7 +27,7 @@
 <style>
 	.contact {
 		display: flex;
-		gap: var(--size-3);
+		gap: 1rem;
 		flex-wrap: wrap;
 		max-width: 1080px;
 	}
@@ -37,7 +37,7 @@
 	}
 
 	.contact-info {
-		max-width: var(--size-14);
+		max-width: 20rem;
 	}
 
 	a:hover {
@@ -45,6 +45,6 @@
 	}
 
 	p {
-		margin-block: var(--size-2);
+		margin-block: .5rem;
 	}
 </style>

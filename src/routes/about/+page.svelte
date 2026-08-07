@@ -62,7 +62,7 @@
 <style lang="scss">
 	main {
 		display: flex;
-		gap: 10px;
+		gap: 1.5rem;
 
 		.sidebar {
 			.select {
@@ -81,8 +81,8 @@
 			border-right: 1px solid var(--surface-1);
 
 			& button {
-				padding-inline: var(--size-2);
-				padding-block: var(--size-3);
+				padding-inline: .5rem;
+				padding-block: 1rem;
 				text-align: left;
 				width: 100%;
 

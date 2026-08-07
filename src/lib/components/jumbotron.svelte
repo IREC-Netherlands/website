@@ -15,10 +15,6 @@
 			{subtitle}
 		</p>
 		<p>{description}</p>
-		<br />
-		<a href={buttonLink}>
-			<button><MapPin class="inline"/> {buttonText}</button>
-		</a>
 	</div>
 </div>
 

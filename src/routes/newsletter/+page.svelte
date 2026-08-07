@@ -29,7 +29,7 @@
 
 	.calendar {
 		width: 100%;
-		margin-top: var(--size-3);
+		margin-top: 1rem;
 		justify-items: center;
 		border-width: 1px;
 		border-color: rgba(63, 63, 63, 0.3);
@@ -37,7 +37,7 @@
 
 	.projects {
 		display: flex;
-		gap: var(--size-4);
+		gap: 1.25rem;
 		flex-wrap: wrap;
 	}
 

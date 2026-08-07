@@ -1,6 +1,6 @@
 <script lang="ts">
-	import '../app.css';
-	import '$lib/styles/open.css';
+	// import '../app.css';
+	// import '$lib/styles/open.css';
 	import { ChevronUpCircle } from 'lucide-svelte';
 
 	import Header from '$lib/components/header.svelte';
@@ -9,12 +9,18 @@
 	let { children } = $props();
 </script>
 
-<Header />
-<div class="layout">
-	{@render children()}
+<div class="grid grid-cols-12">
+	<div class="relative row-start-1 col-span-full">
+		<Header />
+		<main class="col-span-full row-start-3">
+			<div class="relative grid grid-cols-12">
+				{@render children()}
+			</div>
+			<a title="Back to top" class="back-to-top" href="#top"><ChevronUpCircle size="40px" /></a>
+		</main>
+		<Footer />
+	</div>
 </div>
-<Footer />
-<a title="Back to top" class="back-to-top" href="#top"><ChevronUpCircle size="40px" /></a>
 
 <style>
 	.layout {

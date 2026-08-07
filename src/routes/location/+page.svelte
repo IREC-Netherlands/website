@@ -58,23 +58,23 @@
 <style>
 	.title {
 		font-weight: var(--font-weight-bold);
-		margin-block: var(--size-2);
+		margin-block: .5rem;
 	}
 	.locations {
 		flex-direction: row;
 	}
 	.contact-info {
-		max-width: var(--size-14);
+		max-width: 20rem;
 
 		p {
-			margin-block: var(--size-1);
+			margin-block: .25rem;
 		}
 	}
 
 	.widgets {
 		display: flex;
 		flex-wrap: wrap;
-		gap: var(--size-3);
+		gap: 1rem;
 	}
 
 	.maps-iframe {

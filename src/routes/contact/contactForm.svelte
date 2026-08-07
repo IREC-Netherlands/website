@@ -57,19 +57,19 @@
 
 	form {
 		display: grid;
-		padding: var(--size-3);
-		gap: var(--size-1);
+		padding: 1rem;
+		gap: .25rem;
 	}
 
 	input,
 	textarea {
 		background-color: white;
-		padding: var(--size-2);
+		padding: .5rem;
 	}
 
 	.submit-button {
-		width: var(--size-12);
-		margin-block: var(--size-3);
+		width: 10rem;
+		margin-block: 1rem;
 
 		align-items: center;
 		appearance: none;
@@ -88,7 +88,7 @@
 		font-family: 'Google Sans', Roboto, Arial, sans-serif;
 		font-size: 14px;
 		font-weight: 500;
-		height: var(--size-7);
+		height: 2rem;
 		justify-content: center;
 		letter-spacing: 0.25px;
 		line-height: normal;

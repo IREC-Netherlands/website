@@ -24,7 +24,7 @@
 
 		<div class="tags flex gap-3 mt-9">
 			{#each data.meta.categories as category}
-				<span class="surface-4 rounded-2xl px-3 py-2">&num;{category}</span>
+				<span class="surface-2 rounded-2xl px-3 py-2">&num;{category}</span>
 			{/each}
 		</div>
 		<div class="grid grid-cols-[1fr_2fr] my-5 gap-3 max-sm:grid-cols-1">
@@ -58,7 +58,8 @@
 	details {
 		position: relative;
 		overflow: hidden;
-		border-radius: var(--radius-2xl);
+		border-top-right-radius: var(--radius-2xl);
+		border-top-left-radius: var(--radius-2xl);
 		background-color: var(--surface-1);
 	}
 
