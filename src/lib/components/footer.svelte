@@ -1,17 +1,19 @@
 <script lang="ts">
 	import * as config from '$lib/config';
-	import grii_logo from '$lib/assets/logo/grii/logo-nl-flag.png'
-	import instagram from '$lib/assets/logo/social_media/instagram.svg'
-	import youtube from '$lib/assets/logo/social_media/youtube.svg'
-	import gmail from '$lib/assets/logo/social_media/gmail.svg'
+	import grii_logo from '$lib/assets/logo/grii/logo-nl-flag.png';
+	import instagram from '$lib/assets/logo/social_media/instagram.svg';
+	import youtube from '$lib/assets/logo/social_media/youtube.svg';
+	import gmail from '$lib/assets/logo/social_media/gmail.svg';
 </script>
 
 <footer class="surface-3">
 	<div class="footer-main">
 		<div class="footer-logo">
-			<a title='home' href="/" class="logo">
-				<img class="img-logo" src={grii_logo} alt="GRII Belanda" />
-			</a>
+			<div class="flex">
+				<a title="Home" href="/">
+					<img class="img-logo" src={grii_logo} alt="GRII Belanda" />
+				</a>
+			</div>
 		</div>
 		<div class="footer-content">
 			<div class="credits">
@@ -139,7 +141,7 @@
 	}
 
 	.icons:hover {
-		filter: invert(70%)
+		filter: invert(70%);
 	}
 
 	.img-logo {

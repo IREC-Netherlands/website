@@ -28,8 +28,8 @@
 		bottom: 40px;
 		right: 40px;
 		padding: 5px;
-		background-color: rgba(136, 136, 136, 0.466);
-		z-index: 10;
+		background-color: rgba(175, 175, 175, 0.35);
+		z-index: 100;
 		border-radius: var(--radius-2xl);
 		translate: 100px;
 		transition:

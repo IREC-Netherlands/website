@@ -12,7 +12,7 @@
 <section>
 	{#each data.events.slice(0, 3) as event}
 		<a href="/articles/{event.slug}">
-			<Cards title={event.title} description={event.description} image={event.image.default} />
+			<Cards title={event.title} description={event.description} image={event.image.default} --aspect-ratio="4/5"/>
 		</a>
 	{/each}
 </section>
@@ -22,9 +22,9 @@
 </div>
 
 <section class="bg-[#2d4685]">
-	{#each data.events.slice(0, 3) as event}
-		<a href="/articles/{event.slug}">
-			<Cards title={event.title} description={event.description} image={event.image.default} />
+	{#each data.communities as community}
+		<a href="/articles/{community.slug}">
+			<Cards title={community.title} description={community.description} image={community.image.default} --aspect-ratio="16/10"/>
 		</a>
 	{/each}
 </section>
@@ -33,7 +33,6 @@
 	section {
 		display: flex;
 		flex-wrap: wrap;
-		overflow: hidden;
 		gap: var(--size-7);
 		justify-content: center;
 		padding-block: var(--size-10);
