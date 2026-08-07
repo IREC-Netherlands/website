@@ -73,32 +73,32 @@
 	nav {
 		display: flex;
 		position: relative;
-		padding-inline: var(--size-12);
-		padding-block: var(--size-3);
+		padding-inline: 10rem;
+		padding-block: 1rem;
 
 		@media (width < 1280px) {
 			display: grid;
 			justify-items: center;
-			padding-inline: var(--size-0);
+			padding-inline: 0rem;
 		}
 
 		@media (width < 768px) {
-			padding-block: var(--size-0);
-			padding-top: var(--size-3);
+			padding-block: 0rem;
+			padding-top: 1rem;
 		}
 
 		.logo {
-			margin-block: var(--size-3);
+			margin-block: 1rem;
 
 			.logo-img {
-				width: var(--size-13);
+				width: 15rem;
 			}
 		}
 
 		button {
 			display: flex;
 			position: relative;
-			padding-block: var(--size-2);
+			padding-block: .5rem;
 			justify-content: center;
 			width: 100%;
 
@@ -128,8 +128,8 @@
 				display: flex;
 				list-style-type: none;
 				justify-content: right;
-				padding-inline: var(--size-3);
-				gap: var(--size-7);
+				padding-inline: 1rem;
+				gap: 2rem;
 
 				@media (width < 1280px) {
 					justify-content: center;
@@ -138,7 +138,7 @@
 				@media (width < 768px) {
 					display: none;
 					background-color: rgba(0, 0, 0, 0.8);
-					gap: var(--size-2);
+					gap: .5rem;
 					width: 100%;
 					z-index: 1;
 				}
@@ -153,7 +153,7 @@
 					border-bottom-color: transparent;
 					border-bottom-style: inset;
 					font-weight: var(--font-weight-medium);
-					margin: var(--size-2);
+					margin: .5rem;
 				}
 
 				li.active {

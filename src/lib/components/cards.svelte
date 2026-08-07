@@ -26,14 +26,15 @@
 	.card {
 		display: grid;
 		grid-template-rows: auto 1fr;
-		height: 100%;
+		/* height: 100%; */
 		overflow: hidden;
 		background-color: var(--surface-1);
 		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 		transition: box-shadow 0.3s ease;
-		border-radius: var(--radius-2xl);
+		border-top-left-radius: var(--radius-3xl);
+		border-bottom-right-radius: var(--radius-3xl);
 		@media (width >= 768px) {
-			max-width: var(--max-width, var(--size-15));
+			max-width: var(--max-width, 30rem);
 		}
 
 		.image-container {
@@ -52,11 +53,11 @@
 	}
 
 	.card-description {
-		font-size: var(--size-19);
+		font-size: 3rem;
 		color: var(--text-1);
 		font-weight: var(--font-weight-3);
 		margin-top: 10px;
-		height: var(--size-9);
+		height: 4rem;
 
 		line-clamp: 3;
 		overflow-y: scroll;

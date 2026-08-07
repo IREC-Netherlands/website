@@ -1,4 +1,5 @@
 <script>
+	import { MapPin } from 'lucide-svelte';
 	const title = 'IREC Netherlands';
 	const subtitle = 'International Reformed Evangelical Church in the Netherlands';
 	const description =
@@ -7,7 +8,7 @@
 	const buttonLink = 'https://maps.app.goo.gl/eN5qRN4VpHedyr7FA';
 </script>
 
-<div class="jumbotron surface-4">
+<div class="jumbotron">
 	<div class="text">
 		<p class="title">{title}</p>
 		<p class="subtitle">
@@ -16,7 +17,7 @@
 		<p>{description}</p>
 		<br />
 		<a href={buttonLink}>
-			<button>{buttonText}</button>
+			<button><MapPin class="inline"/> {buttonText}</button>
 		</a>
 	</div>
 </div>
@@ -27,14 +28,13 @@
 		justify-self: center;
 		padding: 70px 10%;
 		text-align: left;
-		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 		display: flex;
 		flex-direction: column;
 		align-items: left;
 	}
 
 	.jumbotron .text {
-		max-width: var(--size-15);
+		max-width: 30rem;
 	}
 
 	.jumbotron .title {
@@ -53,13 +53,14 @@
 	}
 
 	.jumbotron button {
-		margin-top: 40px;
-		padding: 10px 15px;
-		font-weight: var(--font-weight-medium);
+		margin-top: 16px;
+		width: 100%;
+		padding: 12px 16px;
 		color: var(--text-1);
+		font-weight: var(--font-weight-medium);
 		background-color: var(--surface-1);
 		border: none;
-		border-radius: var(--radius-xl);
+		border-radius: var(--radius-3xl);
 		cursor: pointer;
 		transition: background-color 0.1s;
 
@@ -68,5 +69,4 @@
 			box-shadow: var(--shadow-md);
 		}
 	}
-
 </style>

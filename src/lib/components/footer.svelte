@@ -99,12 +99,12 @@
 	footer {
 		display: flex;
 		justify-content: center;
-		padding-top: var(--size-11);
-		padding-bottom: var(--size-11);
-		padding-inline: var(--size-13);
+		padding-top: 7.5rem;
+		padding-bottom: 7.5rem;
+		padding-inline: 15rem;
 
 		@media (width < 768px) {
-			padding-inline: var(--size-8);
+			padding-inline: 3rem;
 		}
 
 		.footer-main {
@@ -122,8 +122,8 @@
 				}
 
 				div {
-					width: var(--size-14);
-					margin-bottom: var(--size-8);
+					width: 15rem;
+					margin-bottom: 3rem;
 				}
 			}
 		}
@@ -131,11 +131,11 @@
 
 	.social-media {
 		display: flex;
-		gap: var(--size-5);
+		gap: 1.5rem;
 	}
 
 	.icons {
-		height: var(--size-7);
+		height: 2rem;
 		aspect-ratio: 1;
 		filter: invert();
 	}
@@ -145,12 +145,12 @@
 	}
 
 	.img-logo {
-		max-width: var(--size-13);
-		margin-block: var(--size-3);
+		max-width: 15rem;
+		margin-block: 1rem;
 	}
 
 	:is(ol) {
-		padding-inline: var(--size-6);
+		padding-inline: 1.75rem;
 		list-style-type: circle;
 	}
 

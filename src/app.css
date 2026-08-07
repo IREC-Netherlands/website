@@ -2,7 +2,7 @@
 
 html {
 	/* font */
-	--font-system-ui: 'Montserrat', sans-serif;
+	--font-system-ui: 'Source Sans 3', sans-serif;
 	--font-monospace-code: 'JetBrains Mono', monospace;
 
 	/* Screen sizes */
@@ -26,8 +26,8 @@ html {
 	--text-2-dark: var(--color-gray-700);
 	--text-3-dark: var(--color-gray-300);
 	--text-4-dark: var(--color-white);
-	--surface-1-dark: rgb(244, 231, 229);
-	--surface-2-dark: rgb(187, 130, 119);
+	--surface-1-dark: rgba(244, 231, 229, 0.6);
+	--surface-2-dark: rgb(238, 218, 215);
 	--surface-3-dark: rgb(0, 0, 0);
 	--surface-4-dark: rgb(103, 0, 1);
 	--background-dark: white;
@@ -39,8 +39,8 @@ html {
 	--text-2-light: var(--color-gray-700);
 	--text-3-light: var(--color-gray-300);
 	--text-4-light: var(--color-white);
-	--surface-1-light: rgb(244, 231, 229);
-	--surface-2-light: rgb(187, 130, 119);
+	--surface-1-light: rgba(244, 231, 229, 0.6);
+	--surface-2-light: rgb(238, 218, 215);
 	--surface-3-light: rgb(0, 0, 0);
 	--surface-4-light: rgb(103, 0, 1);
 	--background-light: white;
@@ -84,6 +84,7 @@ html {
 
 [color-scheme='dark'] {
 	color-scheme: dark;
+	interpolate-size: allow-keywords;
 
 	--brand: var(--brand-dark);
 	--text-1: var(--text-1-dark);
@@ -100,6 +101,7 @@ html {
 
 [color-scheme='light'] {
 	color-scheme: light;
+	interpolate-size: allow-keywords;
 
 	--brand: var(--brand-light);
 	--text-1: var(--text-1-light);
@@ -114,11 +116,14 @@ html {
 	--border: var(--border-light);
 }
 
+* {
+	margin: 0;
+}
 /* Default font and text configurations */
 html {
 	color: var(--text-1);
 	font-family: var(--font-system-ui);
-	font-size: var(--text-sm);
+	font-size: var(--text-md);
 	line-height: var(--text-sm--line-height);
 	font-weight: var(--font-weight-4);
 	font-feature-settings: 'lnum';
@@ -132,16 +137,16 @@ html {
 
 ol {
 	list-style: decimal;
-	padding-left: var(--size-8);
+	padding-left: 3rem;
 }
 
 ul {
 	list-style: circle;
-	padding-left: var(--size-8);
+	padding-left: 3rem;
 }
 
 li {
-	margin-block: var(--size-0);
+	margin-block: 0;
 	max-inline-size: none;
 }
 
@@ -182,18 +187,18 @@ a:active {
 	font-size: var(--text-4xl);
 	line-height: var(--text-4xl--line-height);
 	font-weight: var(--font-weight-bold);
-	max-inline-size: var(--size-header-1);
+	max-inline-size: 20ch;
 }
 
 :where(h2) {
 	font-size: var(--text-2xl);
 	line-height: var(--text-2xl--line-height);
 	font-weight: var(--font-weight-medium);
-	max-inline-size: var(--size-header-2);
+	max-inline-size: 25ch;
 }
 
 :where(h3, h4, h5, h6, dt) {
-	max-inline-size: var(--size-header-3);
+	max-inline-size: 35ch;
 	font-weight: var(--font-weight-medium);
 }
 :where(h3) {
@@ -207,4 +212,18 @@ a:active {
 :where(h5) {
 	font-size: var(--text-lg);
 	line-height: var(--text-lg--line-height);
+}
+
+.buttons {
+	width: 100%;
+	margin-top: 1rem;
+	padding: 0.75rem 1rem;
+	background-color: var(--surface-1);
+	border-radius: var(--radius-3xl);
+	transition: background-color 0.1s;
+	cursor: pointer;
+
+	&:hover {
+		box-shadow: var(--shadow-md);
+	}
 }
