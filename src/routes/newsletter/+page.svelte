@@ -11,27 +11,25 @@
 			<!-- <ProjectHighlight /> -->
 			<!-- <ProjectHighlight /> -->
 		</section>
-		<section class="spreadsheet">
+		<section class="spreadsheet bulletin">
 			<iframe title="bulletin" class="bulletin" src={PUBLIC_GOOGLE_SPREADSHEET_URL}></iframe>
-		</section>
-		<section class="aspect-4/5 md:aspect-video calendar">
-			<iframe title="calendar" src={PUBLIC_GOOGLE_CALENDAR_URL} scrolling="no"></iframe>
+			<iframe
+				title="calendar"
+				class="aspect-4/5 md:aspect-video calendar"
+				src={PUBLIC_GOOGLE_CALENDAR_URL}
+			></iframe>
 		</section>
 	</div>
 </main>
 
 <style>
-	iframe.bulletin {
+	.bulletin {
 		max-width: 1070px;
-		min-height: 860px;
-		overflow: hidden;
-		border: none;
-		scrollbar-width:none;
 	}
 
 	.calendar {
 		width: 100%;
-		margin-top: var(--size-10);
+		margin-top: var(--size-3);
 		justify-items: center;
 		border-width: 1px;
 		border-color: rgba(63, 63, 63, 0.3);
@@ -45,8 +43,11 @@
 
 	iframe {
 		width: 100%;
-		height: 100%;
 		margin: 1px;
 		align-items: center;
+	}
+
+	iframe.bulletin {
+		min-height: 860px;
 	}
 </style>

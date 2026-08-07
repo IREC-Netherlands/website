@@ -1,7 +1,7 @@
 main {
-	justify-self: center;
 	height: 100%;
 	width: 100%;
+	justify-self: center;
 	padding-inline: var(--size-3);
 	padding-top: var(--size-3);
 	padding-bottom: var(--size-10);

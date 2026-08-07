@@ -29,9 +29,9 @@
 		</div>
 		<div class="grid grid-cols-[1fr_2fr] my-5 gap-3 max-sm:grid-cols-1">
 			<div class=" min-w-sm">
-				<div class="max-sm:hidden">
+				<div class="max-sm:hidden flex flex-wrap gap-2">
 					{#each data.images as image}
-						<img alt={data.meta.title} src={image.default} class="mb-5" />
+						<img alt={data.meta.title} src={image.default} />
 					{/each}
 				</div>
 				<div class="sm:hidden">

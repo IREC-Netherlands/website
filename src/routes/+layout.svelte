@@ -18,6 +18,7 @@
 
 <style>
 	.layout {
+		display: grid;
 		margin-inline: auto;
 		min-height: 80vh;
 	}
@@ -44,7 +45,6 @@
 		background-color: rgba(136, 136, 136, 1);
 	}
 
-	
 	@container scroll-state(scrollable: top) {
 		.back-to-top {
 			translate: 0;
