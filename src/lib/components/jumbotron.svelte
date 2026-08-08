@@ -20,7 +20,8 @@
 	.jumbotron {
 		width: 100%;
 		justify-self: center;
-		padding-block: 6rem;
+		padding-block: 1.5rem;
+		padding-bottom: 8rem;
 
 		@media (width > 40rem) {
 			padding-left: 6rem;

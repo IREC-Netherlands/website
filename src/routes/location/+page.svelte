@@ -12,8 +12,10 @@
 		<hr />
 		<div class="locations">
 			<div class="contact-info">
-				<p class="title">International Reformed Evangelical Church in the Netherlands</p>
-				<p>Vierhovenkerk</p>
+				<p class="font-extrabold text-xl my-4">
+					International Reformed Evangelical Church in the Netherlands
+				</p>
+				<p class="font-semibold text-lg">Vierhovenkerk</p>
 				<p>Obrechtstraat 50</p>
 				<p>2625 XN, Delft</p>
 			</div>
@@ -57,10 +59,6 @@
 </main>
 
 <style>
-	.title {
-		font-weight: var(--font-weight-bold);
-		margin-block: 0.5rem;
-	}
 	.locations {
 		flex-direction: row;
 		margin-block: 1.5rem;
@@ -69,7 +67,7 @@
 		max-width: 20rem;
 
 		p {
-			margin-block: 0.25rem;
+			margin-block: 0.125rem;
 		}
 	}
 
