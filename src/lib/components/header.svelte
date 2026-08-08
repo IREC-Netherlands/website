@@ -34,7 +34,7 @@
 			isOpen = false;
 		}}
 	>
-		<img src={logo} alt="GRII Belanda" class='logo-img'/>
+		<img src={logo} alt="GRII Belanda" class="logo-img" />
 	</a>
 
 	<button
@@ -75,6 +75,7 @@
 		position: relative;
 		padding-inline: 10rem;
 		padding-block: 1rem;
+		z-index: 40;
 
 		@media (width < 1280px) {
 			display: grid;
@@ -98,7 +99,7 @@
 		button {
 			display: flex;
 			position: relative;
-			padding-block: .5rem;
+			padding-block: 0.5rem;
 			justify-content: center;
 			width: 100%;
 
@@ -138,7 +139,7 @@
 				@media (width < 768px) {
 					display: none;
 					background-color: rgba(0, 0, 0, 0.8);
-					gap: .5rem;
+					gap: 0.5rem;
 					width: 100%;
 					z-index: 1;
 				}
@@ -153,7 +154,9 @@
 					border-bottom-color: transparent;
 					border-bottom-style: inset;
 					font-weight: var(--font-weight-medium);
-					margin: .5rem;
+					font-size: var(--text-lg);
+					line-height: var(--text-lg--line-height);
+					margin: 0.5rem;
 				}
 
 				li.active {

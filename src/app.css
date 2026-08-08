@@ -116,14 +116,11 @@ html {
 	--border: var(--border-light);
 }
 
-* {
-	margin: 0;
-}
 /* Default font and text configurations */
 html {
 	color: var(--text-1);
 	font-family: var(--font-system-ui);
-	font-size: var(--text-md);
+	font-size: var(--text-sm);
 	line-height: var(--text-sm--line-height);
 	font-weight: var(--font-weight-4);
 	font-feature-settings: 'lnum';
@@ -187,14 +184,14 @@ a:active {
 	font-size: var(--text-4xl);
 	line-height: var(--text-4xl--line-height);
 	font-weight: var(--font-weight-bold);
-	max-inline-size: 20ch;
+	max-inline-size: 30ch;
 }
 
 :where(h2) {
 	font-size: var(--text-2xl);
 	line-height: var(--text-2xl--line-height);
 	font-weight: var(--font-weight-medium);
-	max-inline-size: 25ch;
+	max-inline-size: 40ch;
 }
 
 :where(h3, h4, h5, h6, dt) {
@@ -214,16 +211,4 @@ a:active {
 	line-height: var(--text-lg--line-height);
 }
 
-.buttons {
-	width: 100%;
-	margin-top: 1rem;
-	padding: 0.75rem 1rem;
-	background-color: var(--surface-1);
-	border-radius: var(--radius-3xl);
-	transition: background-color 0.1s;
-	cursor: pointer;
 
-	&:hover {
-		box-shadow: var(--shadow-md);
-	}
-}

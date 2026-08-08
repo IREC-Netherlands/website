@@ -1,5 +1,5 @@
 <script lang="ts">
-	// import '../app.css';
+	import '../app.css';
 	// import '$lib/styles/open.css';
 	import { ChevronUpCircle } from 'lucide-svelte';
 
@@ -9,26 +9,14 @@
 	let { children } = $props();
 </script>
 
-<div class="grid grid-cols-12">
-	<div class="relative row-start-1 col-span-full">
-		<Header />
-		<main class="col-span-full row-start-3">
-			<div class="relative grid grid-cols-12">
-				{@render children()}
-			</div>
-			<a title="Back to top" class="back-to-top" href="#top"><ChevronUpCircle size="40px" /></a>
-		</main>
-		<Footer />
-	</div>
+<Header />
+<div class="grid mx-auto min-h-[80vh]">
+	{@render children()}
 </div>
+<a title="Back to top" class="back-to-top" href="#top"><ChevronUpCircle size="40px" /></a>
+<Footer />
 
 <style>
-	.layout {
-		display: grid;
-		margin-inline: auto;
-		min-height: 80vh;
-	}
-
 	.back-to-top {
 		display: none;
 		position: fixed;

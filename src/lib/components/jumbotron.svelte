@@ -14,7 +14,7 @@
 		<p class="subtitle">
 			{subtitle}
 		</p>
-		<p>{description}</p>
+		<p class="description">{description}</p>
 	</div>
 </div>
 
@@ -22,7 +22,12 @@
 	.jumbotron {
 		width: 100%;
 		justify-self: center;
-		padding: 70px 10%;
+		padding-block: 6rem;
+
+		@media (width > 40rem) {
+			padding-left: 6rem;
+		}
+
 		text-align: left;
 		display: flex;
 		flex-direction: column;
@@ -30,39 +35,27 @@
 	}
 
 	.jumbotron .text {
-		max-width: 30rem;
+		max-width: 33rem;
 	}
 
 	.jumbotron .title {
 		font-size: var(--text-5xl);
 		line-height: var(--text-5xl--line-height);
-		font-weight: var(--font-weight-7);
+		font-weight: var(--font-weight-semibold);
+		margin-bottom: 0.5rem;
 	}
 
 	.jumbotron .subtitle {
-		font-size: 1.5rem;
-		font-weight: var(--font-weight-5);
-	}
-
-	.jumbotron p {
-		margin-top: 10px;
-	}
-
-	.jumbotron button {
-		margin-top: 16px;
-		width: 100%;
-		padding: 12px 16px;
-		color: var(--text-1);
+		font-size: var(--text-xl);
+		line-height: var(--text-xl--line-height);
 		font-weight: var(--font-weight-medium);
-		background-color: var(--surface-1);
-		border: none;
-		border-radius: var(--radius-3xl);
-		cursor: pointer;
-		transition: background-color 0.1s;
+		margin-bottom: 1rem;
+		border-bottom: 1px white solid;
+	}
 
-		&:hover {
-			font-weight: var(--font-weight-semibold);
-			box-shadow: var(--shadow-md);
-		}
+	.jumbotron p.description {
+		margin-top: 1rem;
+		font-size: var(--text-lg);
+		line-height: var(--text-lg--line-height);
 	}
 </style>

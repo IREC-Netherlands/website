@@ -16,9 +16,9 @@
 			<img alt="default" src={default_icon} />
 		{/if}
 	</div>
-	<div class="surface-1 p-5 h-50 z-10">
-		<p class="text-lg font-bold m-0">{title}</p>
-		<p class="card-description">{description}</p>
+	<div class="captions">
+		<p class="text-xl font-bold m-0">{title}</p>
+		<p class="card-description text-md">{description}</p>
 	</div>
 </div>
 
@@ -32,13 +32,13 @@
 		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 		transition: box-shadow 0.3s ease;
 		border-top-left-radius: var(--radius-3xl);
-		border-bottom-right-radius: var(--radius-3xl);
+		border-bottom-right-radius: var(--radius-4xl);
 		@media (width >= 768px) {
-			max-width: var(--max-width, 30rem);
+			max-width: var(--max-width, 25rem);
 		}
 
 		.image-container {
-			max-height: var(--max-height);
+			max-height: var(--max-image-height);
 		}
 
 		img {
@@ -53,7 +53,6 @@
 	}
 
 	.card-description {
-		font-size: 3rem;
 		color: var(--text-1);
 		font-weight: var(--font-weight-3);
 		margin-top: 10px;
@@ -63,5 +62,12 @@
 		overflow-y: scroll;
 		text-overflow: ellipsis;
 		scrollbar-width: none;
+	}
+
+	.captions{
+		background-color: var(--surface-1);
+		padding: calc(5 * var(--spacing));
+		height: var(--caption-height);
+		z-index: 10;
 	}
 </style>
