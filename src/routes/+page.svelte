@@ -12,30 +12,48 @@
 </script>
 
 <div class="relative grid grid-cols-12">
+	<!-- picture -->
 	<div
-		class="row-start-1 row-span-4 col-start-5 col-span-9 max-h-[68vh] items-start justify-start relative z-10 overflow-hidden hidden lg:flex"
+		class="row-start-1 row-span-4 col-start-5 col-span-9 max-h-[68vh] items-start
+		justify-start relative z-10 overflow-hidden hidden lg:grid rounded-br-[5rem]"
 	>
-		<img src={images_erec} class="justify-center items-center rounded-b-[5rem]" alt="EREC" />
+		<img src={images_erec} alt="EREC" class="col-start-1 row-start-1"/>
+		<div class="w-full h-full col-start-1 row-start-1 bg-linear-to-b from-(--surface-4)/10 to-(--surface-4)/25"></div>
 	</div>
+
+	<!-- inverted curve -->
 	<div
 		class="row-start-1 row-span-4 col-start-6 col-span-3 items-start justify-start relative z-10 hidden lg:block"
 	>
 		<div class="relative w-full h-full curved-corner-topleft"></div>
 	</div>
+
+	<!-- mid-left -->
 	<div
 		class="row-start-1 row-span-4 col-start-3 col-span-3 items-start justify-start relative z-10 hidden lg:block"
 	>
-		<div class="relative bg-(--surface-4) w-full h-full rounded-br-[10em] 2xl:rounded-br-[16em]"></div>
+		<div
+			class="relative bg-(--surface-4) w-full h-full rounded-br-[10em] 2xl:rounded-br-[16em]"
+		></div>
 	</div>
+
+	<!-- left -->
 	<div
-		class="row-start-1 row-span-4 col-start-1 col-span-3 max-lg:col-span-full items-start justify-start relative z-10"
+		class="row-start-1 row-span-4 col-start-1 col-span-3 max-lg:col-span-full
+		items-start justify-start relative z-10"
 	>
 		<div class="relative bg-(--surface-4) w-full h-full rounded-b-[5rem]"></div>
 	</div>
 
-	<div class="row-start-1 row-span-4 col-span-full relative z-20 flex justify-center items-center px-5 py-10 md:px-20 text-white">
+	<!-- Jumbotron -->
+	<div
+		class="row-start-1 row-span-4 col-span-full relative z-20 flex justify-center
+		items-center px-5 py-10 md:px-20 text-white"
+	>
 		<Jumbotron />
 	</div>
+
+	<!-- discovery widget -->
 	<section
 		class="w-full mx-auto grid md:grid-cols-2 2xl:grid-cols-12 gap-5 lg:gap-8 row-end-7 row-span-3 col-span-full relative z-20 px-5 md:px-20"
 	>
@@ -62,9 +80,9 @@
 			</h2>
 			<a href={musicLink}>
 				<button
-					class="w-full hover:shadow-none inline-flex items-center text-center rounded-3xl 
-					leading-none transform transition duration-200 cursor-pointer font-sans 
-					text-base lg:text-xl px-4 py-3 sm:px-8 font-medium shadow-md justify-center 
+					class="w-full hover:shadow-none inline-flex items-center text-center rounded-3xl
+					leading-none transform transition duration-200 cursor-pointer font-sans
+					text-base lg:text-xl px-4 py-3 sm:px-8 font-medium shadow-md justify-center
 					bg-(--surface-4) group hover:bg-black text-white hover:text-white"
 					><ArrowRight class="inline me-1 group-hover:translate-x-0.5" />
 					{musicText}</button
@@ -73,6 +91,7 @@
 		</div>
 	</section>
 
+	<!-- Events -->
 	<section class="relative col-span-full z-10 my-16 px-3 md:px-20">
 		<div class="w-full flex text-5xl text-left font-semibold mb-8 py-4 border-b">
 			Seminar and Events
@@ -91,6 +110,7 @@
 		</div>
 	</section>
 
+	<!-- Community -->
 	<section class="col-span-full relative z-10 bg-[#2d4685] py-16 px-5 md:px-20">
 		<div class="w-full flex text-5xl text-center font-semibold mb-8 py-4 text-white border-b">
 			Community
@@ -109,6 +129,7 @@
 			{/each}
 		</div>
 	</section>
+
 </div>
 
 <style>
