@@ -9,6 +9,7 @@
 <main>
 	<div>
 		<h1>Location</h1>
+		<hr />
 		<div class="locations">
 			<div class="contact-info">
 				<p class="title">International Reformed Evangelical Church in the Netherlands</p>
@@ -58,16 +59,17 @@
 <style>
 	.title {
 		font-weight: var(--font-weight-bold);
-		margin-block: .5rem;
+		margin-block: 0.5rem;
 	}
 	.locations {
 		flex-direction: row;
+		margin-block: 1.5rem;
 	}
 	.contact-info {
 		max-width: 20rem;
 
 		p {
-			margin-block: .25rem;
+			margin-block: 0.25rem;
 		}
 	}
 

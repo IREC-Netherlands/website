@@ -181,8 +181,8 @@ a:active {
 }
 
 :where(h1) {
-	font-size: var(--text-4xl);
-	line-height: var(--text-4xl--line-height);
+	font-size: var(--text-5xl);
+	line-height: var(--text-5xl--line-height);
 	font-weight: var(--font-weight-bold);
 	max-inline-size: 30ch;
 }

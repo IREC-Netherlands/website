@@ -53,6 +53,7 @@
 			{const about = data.abouts.at(index)!}
 			<div in:fly={{ x: -10 }} class="content">
 				<h1>{about.title}</h1>
+				<hr class="mb-6"/>
 				<about.content />
 			</div>
 		{/key}
@@ -72,7 +73,7 @@
 				line-height: var(--text-md--line-height);
 				border: 1px solid black;
 				border-radius: var(--radius-xl);
-				padding-block: 1em;
+				padding: 1rem;
 				font-weight: var(--font-weight-medium);
 				margin-bottom: 2em;
 			}
@@ -80,8 +81,12 @@
 			flex: 0 0 250px;
 			border-right: 1px solid var(--surface-1);
 
+			.side-menu {
+				margin-right: 1rem;
+			}
+
 			& button {
-				padding-inline: .5rem;
+				padding-inline: 1rem;
 				padding-block: 1rem;
 				text-align: left;
 				width: 100%;

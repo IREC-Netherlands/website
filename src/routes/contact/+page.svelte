@@ -4,9 +4,10 @@
 </script>
 
 <main>
-	<h1>Contact</h1>
+	<h1 class="text-2xl">Contact</h1>
+	<hr />
 	<div class="contact">
-		<div>
+		<div class="pe-5">
 			<div class="descriptions">
 				<div class="contact-info">
 					<p>
@@ -15,7 +16,9 @@
 					</p>
 					<br />
 					<p class="title">International Reformed Evangelical Church in the Netherlands</p>
-					<p class="italic"><a href="mailto:contact@irec-netherlands.org">contact@irec-netherlands.org</a></p>
+					<p class="italic">
+						<a href="mailto:contact@irec-netherlands.org">contact@irec-netherlands.org</a>
+					</p>
 					<br />
 				</div>
 			</div>
@@ -26,6 +29,7 @@
 
 <style>
 	.contact {
+		margin-block: 1.5rem;
 		display: flex;
 		gap: 1rem;
 		flex-wrap: wrap;
@@ -33,7 +37,7 @@
 	}
 
 	.title {
-		font-weight: var(--font-weight-7);
+		font-weight: var(--font-weight-bold);
 	}
 
 	.contact-info {
@@ -45,6 +49,6 @@
 	}
 
 	p {
-		margin-block: .5rem;
+		margin-block: 0.5rem;
 	}
 </style>

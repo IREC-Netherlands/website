@@ -18,7 +18,7 @@
 	</div>
 	<div class="captions">
 		<p class="text-xl font-bold m-0">{title}</p>
-		<p class="card-description text-md">{description}</p>
+		<p class="card-description text-lg">{description}</p>
 	</div>
 </div>
 

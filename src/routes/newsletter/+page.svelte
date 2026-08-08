@@ -7,6 +7,7 @@
 <main>
 	<div>
 		<h1>Newsletter</h1>
+		<hr />
 		<section class="projects">
 			<!-- <ProjectHighlight /> -->
 			<!-- <ProjectHighlight /> -->
@@ -37,7 +38,7 @@
 
 	.projects {
 		display: flex;
-		gap: 1.25rem;
+		margin-block: 1.25rem;
 		flex-wrap: wrap;
 	}
 

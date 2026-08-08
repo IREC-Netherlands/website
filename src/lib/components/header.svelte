@@ -59,7 +59,7 @@
 							isOpen = false;
 						}}
 					>
-						<li class={nav.title === activePage.page ? 'active' : ''}>
+						<li class="text-lg xl:text-xl 3xl:text-2xl {nav.title === activePage.page ? 'active' : ''}">
 							{nav.title}
 						</li>
 					</a>
@@ -154,8 +154,6 @@
 					border-bottom-color: transparent;
 					border-bottom-style: inset;
 					font-weight: var(--font-weight-medium);
-					font-size: var(--text-lg);
-					line-height: var(--text-lg--line-height);
 					margin: 0.5rem;
 				}
 

@@ -1,6 +1,6 @@
 ---
 title: "Necoclassical Art: Reason, Order, and Design"
-description: Rev. Dr.Billy Kristanto
+description: Rev. Dr. Billy Kristanto
 date: '2026-6-27'
 categories:
   - events

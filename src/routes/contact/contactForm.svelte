@@ -81,11 +81,10 @@
 			rgba(0, 0, 0, 0.14) 0 6px 10px 0,
 			rgba(0, 0, 0, 0.12) 0 1px 18px 0;
 		box-sizing: border-box;
-		color: #3c4043;
+		color: var(--text-2);
 		cursor: pointer;
 		display: inline-flex;
 		fill: currentcolor;
-		font-family: 'Google Sans', Roboto, Arial, sans-serif;
 		font-size: 14px;
 		font-weight: 500;
 		height: 2rem;
@@ -111,7 +110,7 @@
 
 	.submit-button:hover {
 		background: #f6f9fe;
-		color: #174ea6;
+		color: #a64017;
 	}
 
 	.submit-button:active {
