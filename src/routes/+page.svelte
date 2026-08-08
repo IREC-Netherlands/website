@@ -3,13 +3,31 @@
 	import Jumbotron from '$lib/components/jumbotron.svelte';
 	import '$lib/styles/pages.css';
 	import { MapPin } from 'lucide-svelte';
+	import images_erec from '$lib/assets/images/index.png';
 	let { data } = $props();
 	const buttonText = 'Our Location';
 	const buttonLink = 'https://maps.app.goo.gl/eN5qRN4VpHedyr7FA';
 </script>
 
 <div class="relative grid grid-cols-12">
-	<div class="row-start-1 row-span-4 col-span-full items-start justify-start relative z-10">
+	<div
+		class="row-start-1 row-span-4 col-start-5 col-span-9 items-start justify-start relative z-10 overflow-hidden hidden lg:flex"
+	>
+		<img src={images_erec} class="justify-center items-center rounded-b-4xl bottom" alt="EREC" />
+	</div>
+	<div
+		class="row-start-1 row-span-4 col-start-6 col-span-3 items-start justify-start relative z-10 hidden lg:block"
+	>
+		<div class="relative w-full h-full curved-corner-topleft"></div>
+	</div>
+	<div
+		class="row-start-1 row-span-4 col-start-4 col-span-2 items-start justify-start relative z-10 hidden lg:block"
+	>
+		<div class="relative bg-(--surface-4) w-full h-full rounded-br-full"></div>
+	</div>
+	<div
+		class="row-start-1 row-span-4 col-start-1 col-span-3 max-lg:col-span-full items-start justify-start relative z-10"
+	>
 		<div class="relative bg-(--surface-4) w-full h-full rounded-b-4xl"></div>
 	</div>
 
@@ -17,7 +35,7 @@
 		<Jumbotron />
 	</div>
 	<section
-		class="w-full mx-auto grid md:grid-cols-2 2xl:grid-cols-12 gap-5 lg:gap-8 row-start-2 row-span-4 col-span-full relative z-20 px-5 md:px-20"
+		class="w-full mx-auto grid md:grid-cols-2 2xl:grid-cols-12 gap-5 lg:gap-8 row-end-7 row-span-3 col-span-full relative z-20 px-5 md:px-20"
 	>
 		<div class="discovery-widget 2xl:col-start-2 2xl:col-span-5">
 			<h2
@@ -48,7 +66,9 @@
 	</section>
 
 	<section class="relative col-span-full z-10 my-16 px-2 md:px-20">
-		<div class="w-full flex text-5xl text-left font-semibold mb-8 py-4 sm:ms-15 border-b">Seminar and Events</div>
+		<div class="w-full flex text-5xl text-left font-semibold mb-8 py-4 sm:ms-15 border-b">
+			Seminar and Events
+		</div>
 		<div class="w-full flex flex-wrap justify-center gap-10">
 			{#each data.events.slice(0, 3) as event}
 				<a href="/articles/{event.slug}">
@@ -64,7 +84,9 @@
 	</section>
 
 	<section class="col-span-full relative z-10 bg-[#2d4685] py-16 px-5 md:px-20">
-		<div class="w-full flex text-5xl text-center font-semibold mb-8 py-4 text-white sm:ms-15 border-b">
+		<div
+			class="w-full flex text-5xl text-center font-semibold mb-8 py-4 text-white sm:ms-15 border-b"
+		>
 			Community
 		</div>
 		<div class="w-full flex flex-wrap justify-center gap-10">
@@ -104,5 +126,23 @@
 		@media (width >= 80rem /* 1280px */) {
 			padding-inline: calc(var(--spacing) * 12);
 		}
+	}
+
+	.curved-corner-topleft {
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		position: relative;
+	}
+	.curved-corner-topleft::before {
+		content: '';
+		display: block;
+		width: 200%;
+		height: 200%;
+		position: absolute;
+		border-radius: calc(1px * infinity);
+		top: 0;
+		left: 0;
+		box-shadow: 0px -450px 0 0 var(--surface-4);
 	}
 </style>
